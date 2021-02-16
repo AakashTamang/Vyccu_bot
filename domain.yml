@@ -15,13 +15,13 @@ actions:
 - action_greeting
 - action_handle_fallback
 - action_location
+- action_no
 - action_out_of_scope
 - action_service_center_list
 - action_show_type_of_interest
 - action_show_type_of_loan
 - action_show_type_of_services
 - action_type_of_specific_service
-- action_no
 entities:
 - type_of_loan
 - type_of_services

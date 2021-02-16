@@ -110,8 +110,8 @@ class FetchTypeOfServices(Action):
 			"health insurance": "<a href = 'http://vyccu.org.np/services/health-insurance'>Health Insurance Service </a>",
 			"atm": "<a href= 'http://vyccu.org.np/services/atm-service'>ATM Service</a>",
 			"sms banking": "<a href = 'http://vyccu.org.np/services/other-services'>SMS Banking Service</a>",
-			"mobile banking": "<a href = 'http://vyccu.org.np/services/other-services>Mobile Banking Service</a>",
-			"other services": "<a href = 'http://vyccu.org.np/services/other-services>Other Banking Service</a>"
+			"mobile banking": "<a href = 'http://vyccu.org.np/services/other-services'>Mobile Banking Service</a>",
+			"other services": "<a href = 'http://vyccu.org.np/services/other-services'>Other Banking Service</a>"
 		}
 		try:
 			service_link = type_list[service_type]
@@ -147,6 +147,10 @@ class FetchTypeOfInterest(Action):
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		try:
 			interest_type = tracker.get_slot('type_of_services')
+			if interest_type == "rate loan":
+				interest_type = "loan"
+			elif interest_type == "rate deposit":
+				interest_type = "deposit"
 		except:
 			messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
 				"I find it quite ambiguous. Can you tell me again a bit clearly?"]

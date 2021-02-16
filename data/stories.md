@@ -185,20 +185,20 @@
 ## interactive_story_6
 * interest_rate
     - action_show_type_of_interest
-* interest_rate{"type_of_services": "deposit"}
-    - slot{"type_of_services": "deposit"}
+* interest_rate{"type_of_services": "rate deposit"}
+    - slot{"type_of_services": "rate deposit"}
     - action_fetch_type_of_interest
     - slot{"type_of_services": null}
 
 ## interactive_story_7
-* interest_rate{"type_of_services": "deposit"}
-    - slot{"type_of_services": "deposit"}
+* interest_rate{"type_of_services": "rate deposit"}
+    - slot{"type_of_services": "rate deposit"}
     - action_fetch_type_of_interest
     - slot{"type_of_services": null}
 
 ## interactive_story_8
-* interest_rate{"type_of_services": "loan"}
-    - slot{"type_of_services": "loan"}
+* interest_rate{"type_of_services": "rate loan"}
+    - slot{"type_of_services": "rate loan"}
     - action_fetch_type_of_interest
     - slot{"type_of_services": null}
 
@@ -275,5 +275,13 @@
     - action_show_type_of_services
 * services{"type_of_services": "other services"}
     - slot{"type_of_services": "other services"}
+    - action_fetch_type_of_services
+    - slot{"type_of_services": null}
+
+## interactive_story_1
+* services
+    - action_show_type_of_services
+* services{"type_of_services": "deposit"}
+    - slot{"type_of_services": "deposit"}
     - action_fetch_type_of_services
     - slot{"type_of_services": null}

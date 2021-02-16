@@ -107,8 +107,8 @@
 - [other services](type_of_services)
 - [Other Services](type_of_services)
 - [Other services](type_of_services)
+- show me services
 - [deposit](type_of_services)
-- [other services](type_of_services)
 
 ## intent:about_specific_service
 - What are the procedure for getting a [loan](type_of_services)?
@@ -305,7 +305,7 @@
 - What is your interest rate?
 - How much interest rate should I pay?
 - What is the interest rate for [loan](type_of_services).
-- [deposit](type_of_services)
+- [rate deposit](type_of_services)
 - show interest rate
 - show the rate of interest
 - tell me about the rate of interest
@@ -319,9 +319,13 @@
 - find interest rate
 - check interest rate
 - check rate for the interests
-- rate [deposit](type_of_services)
+- [rate deposit](type_of_services)
 - what is the rate of interest for [deposit](type_of_services)
 - i want to get the interest rate for the [loans]{"entity": "type_of_services", "value": "loan"}
+- [rate deposit](type_of_services)
+- [rate deposit](type_of_services)
+- [rate loan](type_of_services)
+- [rate loan](type_of_services)
 
 ## intent:location
 - Where is the location of this company?
