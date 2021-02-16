@@ -1,0 +1,72 @@
+actions:
+- action_about
+- action_about_service_center
+- action_about_specific_service
+- action_account_already_exist
+- action_ask_account_already_open
+- action_ask_want_loan
+- action_contact
+- action_create_account
+- action_fetch_type_of_interest
+- action_fetch_type_of_loan
+- action_fetch_type_of_services
+- action_get_atm_card
+- action_goodbye
+- action_greeting
+- action_handle_fallback
+- action_location
+- action_out_of_scope
+- action_service_center_list
+- action_show_type_of_interest
+- action_show_type_of_loan
+- action_show_type_of_services
+- action_type_of_specific_service
+- action_no
+entities:
+- type_of_loan
+- type_of_services
+intents:
+- services
+- deny
+- about_specific_service
+- interest_rate
+- type_of_specific_service
+- affirm
+- about
+- contact
+- location
+- get_atm_card
+- open_account
+- about_service_center
+- greeting
+- goodbye
+- out_of_scope
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  type_of_loan:
+    type: categorical
+    values:
+    - agriculture loan
+    - business loan
+    - career loan
+    - education loan
+    - hire purchase loan
+    - home loan
+    - industry loan
+    - __other__
+  type_of_services:
+    type: categorical
+    values:
+    - atm
+    - sms banking
+    - mobile banking
+    - health insurance
+    - remittance
+    - deposit
+    - loan
+    - rate loan
+    - rate deposit
+    - other services
+    - __other__

@@ -1,0 +1,376 @@
+## intent:greeting
+- hello
+- hi
+- namaste
+- hey there
+- hey
+- hello there
+- good morning
+- good evening
+- good afternoon
+
+## intent:goodbye
+- bye
+- goodbye
+- good bye
+- stop
+- end
+- Bye
+- Bye bye
+- Okay, thank you
+- Okay i am done.
+- Thank you
+- Thanks for helping me
+- Stop
+- exit
+- Okay ,thank you
+- okay, thank you
+- Goodbye
+
+## intent:out_of_scope
+- I can't get enough information.
+- This bot did not help me
+- This bot is useless
+- Not good
+- You are useless
+- This does not work
+- Is Rasa bot really smart?
+- bots are bad
+- I dont like bots
+- Is Rasa bot smart?
+- I can't follow this chatbot
+- what the fuck is going on?
+- What is wrong with this universe?
+- capital city of nepal
+- What is wrong these days?
+- I am so tired
+- I don't want to chat in this bot.
+- This chatbot is not good.
+- Why so high interest rate?
+- This company is fraud.
+- play game
+- how are you
+- how you doing
+- are you fine
+
+## intent:about
+- what is this company
+- What is this company related to?
+- What is the current status of this company?
+- What is this company about?
+- Tell me about VYCCU Credit and Saving Coperative Ltd.
+- What is VYCCU?
+- what is this
+- tell me about yourself
+- tell me about you
+- what is vyccu saving and credit cooperative ltd
+- i want to know about vyccu
+- about vyccu
+
+## intent:services
+- Inform me about the services offered by this company.
+- What are the services of this company?
+- What kind of services are provided by this company?
+- What are the services offered?
+- What type of services do you offer?
+- [mobile banking](type_of_services)
+- I want to know about the services provided by this company
+- [SMS banking](type_of_services)
+- What are the services offered by this company?
+- What services do you offere?
+- How can you help me?
+- What are the services?
+- what services?
+- services
+- What about the services provided by this company?
+- What services can I get from this company?
+- List out the services offered
+- I want to know about the services provided
+- What services can I get from this bank?
+- What type of services do you provide?
+- What service do you provide?
+- [atm](type_of_services)
+- [ATM](type_of_services)
+- [health insurance](type_of_services)
+- [deposit](type_of_services)
+- show services
+- types of services given by vyccu
+- types of services in vivccu ltd
+- list of different services that we can receive from vyccu saving co-operative ltd
+- [sms banking](type_of_services)
+- services of vyccu
+- varities of services
+- types of services
+- [other services](type_of_services) of vyccu
+- [Other Services](type_of_services) that are given in VYCCU
+- [Other services](type_of_services) of VYCCU
+- [other services](type_of_services)
+- [Other Services](type_of_services)
+- [Other services](type_of_services)
+- [deposit](type_of_services)
+- [other services](type_of_services)
+
+## intent:about_specific_service
+- What are the procedure for getting a [loan](type_of_services)?
+- How can I get a [loan](type_of_services)?
+- About [loans](type_of_services)?
+- I want to take a [loan](type_of_services)
+- Provide me [Loan](type_of_services)
+- Please give me [loan](type_of_services)
+- give me [Loan](type_of_services)
+- I want [loans](type_of_services)
+- Give me [loan](type_of_services)
+- I need [Loan](type_of_services)
+- I want to get [loan](type_of_services)
+- How to take [loans](type_of_services) in this company
+- [loan](type_of_services)
+- get [loan](type_of_services)
+- give [loan](type_of_services)
+- i want to register for my [atm](type_of_services) service
+- how can i register for my [ATM](type_of_services) services
+- process to register for [atm](type_of_services)
+- online registration for [sms banking](type_of_services) service
+- [atm](type_of_services) registration
+- activate the [ATM](type_of_services)
+- i need to activate the [SMS Banking](type_of_services)
+- i want to register for [atm](type_of_services)
+- i need to activate my [sms banking](type_of_services) service
+- I want to activate the [mobile banking](type_of_services).
+- How to activate the [mobile banking](type_of_services).
+- i want to [deposit](type_of_services) money
+- i want [remittance](type_of_services)
+- i want [health insurance](type_of_services)
+- Can I get [agriculture loan](type_of_loan)?
+- Can I get [business loan](type_of_loan)?
+- Can I get [career loan](type_of_loan)?
+- Can I get [education loan](type_of_loan)?
+- Can I get [hire purchase loan](type_of_loan)?
+- Can I get [home loan](type_of_loan)?
+- Can I get [industry loan](type_of_loan)?
+- How to get [agriculture loan](type_of_loan)?
+- How to get [business loan](type_of_loan)?
+- How to get [career loan](type_of_loan)?
+- How to get [education loan](type_of_loan)?
+- How to get [hire purchase loan](type_of_loan)?
+- How to get [home loan](type_of_loan)?
+- How to get [industry loan](type_of_loan)?
+- I want to take [business loan](type_of_loan)
+- [business loan](type_of_loan)
+- I want to take a [business loan](type_of_loan)
+- I want a [business loan](type_of_loan)
+- I want to take a [business loan](type_of_loan) from this company
+- [saving loan](type_of_loan)
+- [agriculture loan](type_of_loan)
+- [career loan](type_of_loan)
+- [education loan](type_of_loan)
+- [home loan](type_of_loan)
+- [hire purchase loan](type_of_loan)
+- [industry loan](type_of_loan)
+- i want a [loan](type_of_services) from here
+- i want [mobile banking](type_of_services)
+- initiate [sms banking](type_of_services) for me
+- [remittance](type_of_services)
+
+## intent:type_of_specific_service
+- what are the different type of [deposit](type_of_services)
+- types of [deposits](type_of_services) that vyccu provides
+- various types of [deposit](type_of_services)
+- [Deposit](type_of_services) types in vyccu
+- list the different [Deposit](type_of_services) that we can get from vyccu
+- what are the types of [deposit](type_of_services) in vyccu saving ltd
+- types of [loan](type_of_services)
+- various types of [Loan](type_of_services)
+- different [loans](type_of_services) of vyccu saving and co-operative ltd
+- show all [loan](type_of_services)
+- show the list of [deposits](type_of_services)
+- list the varities of [loan](type_of_services)
+- various [loans](type_of_services) available in vyccu ltd
+- show types of [loan](type_of_services)
+- types of [loans]{"entity": "type_of_services", "value": "loan"} available here
+- types of [deposit](type_of_services) available here
+
+## intent:about_service_center
+- Where are the service centers of this company?
+- How many service centers are there of this company?
+- Please suggest me your nearest service centers?
+- Which is the nearest service center for me?
+- How can I access service centers of this company?
+- What are service centers of this company?
+- Are there service centers of this company nearby me?
+- Does this company have service centers?
+- service centers nearby me
+- service centers near
+- Which service center can i access?
+- which service center should I access?
+- Guide me through the service centers of this company.
+- Please tell me about your service centers.
+- How should I get information about service centers of this company?
+- Please tell me about the service centers available
+- How many service centers?
+- service centers
+- what are the differen service centers
+- where are the service center located
+- list the names of the service centers of vyccu
+- vicuu service center list
+- location of vyccu service centers
+- How many branches do this company have?
+- Can you show me the list of the company’s branches?
+- Give me the list of the company’s branches.
+- How many branches are there?
+- How many branches are there in this company?
+- Okay, what about the branches of this company?
+
+## intent:contact
+- Can I get the contact number of the customer service?
+- Can I get the contact number of the company manager?
+- Can I get the contact number of the London branch?
+- What is the contact number of customer service?
+- What is the contact number of company manager?
+- What is the contact number of  branch?
+- How can I contact your office?
+- How should I contact your office?
+- Is this company linked with any international company?
+- Does the company have any association with foreign company?
+- How can i follow this company online?
+- How to follow this company in internet?
+- provide URL address of this company
+- Does this company have it's own website?
+- How to follow this company?
+- contact number please
+- Provide me contact address of this company
+- How should I contact?
+- What is the procedure to contact
+- Give your contact number
+- contact number
+- contact
+- phone number
+- website of vyccu
+- telephone number
+- Web address
+- website
+- phone number of vyccu
+
+## intent:open_account
+- i want to open an account
+- open a new account
+- open a saving account
+- help me to open a saving account
+- create a new account
+- open an account in vyccu saving and credit co-operative ltd
+- open account in vyccu
+
+## intent:affirm
+- yes
+- yes i have
+- yes i do
+- yeah
+- yes i already have an account
+- i do have an account
+- i do have an account in vyccu
+
+## intent:deny
+- no
+- no i dont have
+- no i don't
+- nope
+- no i dont have any account
+- no i do not have account in vyccu
+
+## intent:interest_rate
+- What is the rate of interest for fixed [Deposit](type_of_services)?
+- What is the rate of interest for [Loan](type_of_services)?
+- Show me the rate of interest for all types of [loans](type_of_services).
+- How much interest will be provided when using fixed [deposit](type_of_services) account?
+- Provide me with the details of rate of interest on all the services.
+- What is the interest rate offered?
+- interet rates of [loan](type_of_services).
+- interest rate of [deposits](type_of_services).
+- How much interest do I get on [deposit](type_of_services)?
+- How much interest should i pay?
+- What is the currest interest rate on [loan](type_of_services)?
+- What is the currest interest rate on fixed [deposit](type_of_services)?
+- How much interest should I pay?
+- [rate loan](type_of_services)
+- How much interest rate for [loan](type_of_services).
+- How much interest rate for [deposits](type_of_services).
+- How much interest should i pay on [Loan](type_of_services).
+- How much interest should i pay on [Deposit](type_of_services).
+- What is the interest rate for [loans](type_of_services)?
+- How much interest should I pay for [deposit](type_of_services)?
+- I want to know about the interest rate
+- interest rate
+- interest
+- rate of interest
+- interest amount
+- What is your interest rate?
+- How much interest rate should I pay?
+- What is the interest rate for [loan](type_of_services).
+- [deposit](type_of_services)
+- show interest rate
+- show the rate of interest
+- tell me about the rate of interest
+- tell me about the rate of interest of [loan](type_of_services)
+- how is the interest rate for [loan](type_of_services)
+- what is the rate of interest for [deposit](type_of_services) in vyccu
+- list the different rate for interest
+- rate of interests
+- rate [loan](type_of_services)
+- interest rate of [deposit](type_of_services)
+- find interest rate
+- check interest rate
+- check rate for the interests
+- rate [deposit](type_of_services)
+- what is the rate of interest for [deposit](type_of_services)
+- i want to get the interest rate for the [loans]{"entity": "type_of_services", "value": "loan"}
+
+## intent:location
+- Where is the location of this company?
+- Where is the company located?
+- Show me the direction to the nearest company.
+- Which is the nearest company from my location?
+- Where is the head office of this company?
+- How can I get to this company?
+- Where is your office located?
+- WHere is this company ??
+- Where is the location of this comnpany?
+- Where is this company?
+- Can i get your location?
+- location
+- where is the company?
+- where is it located?
+- Give me location of this company.
+- where?
+- Where is it?
+- company location
+
+## intent:get_atm_card
+- how to get ATM card
+- where can i receive the ATM card from
+- i want my atm card
+- i need my atm card
+- from where can i get the [ATM]{"entity": "type_of_services", "value": "atm"} card
+- get my atm card
+
+## synonym:atm
+- ATM
+- atm
+
+## synonym:deposit
+- deposit
+- Deposit
+- deposits
+
+## synonym:loan
+- loans
+- loan
+- Loan
+
+## synonym:other services
+- Other services
+- Other Services
+- other servics
+
+## synonym:sms banking
+- sms banking
+- SMS banking
+- SMS Banking
