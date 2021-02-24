@@ -1,0 +1,13 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: action_goodbye
+
+- rule: Say about yourself if the user asks about you
+  steps:
+  - intent: about
+  - action: action_about

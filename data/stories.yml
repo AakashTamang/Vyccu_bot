@@ -1,0 +1,420 @@
+version: "2.0"
+stories:
+- story: Greet Story
+  steps:
+  - intent: greeting
+  - action: action_greeting
+- story: Goodbye Story
+  steps:
+  - intent: goodbye
+  - action: action_goodbye
+- story: story2
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+- story: interactive_story_1
+  steps:
+  - intent: type_of_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_type_of_specific_service
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: affirm
+  - action: action_show_type_of_loan
+  - intent: about_specific_service
+    entities:
+    - type_of_loan: education loan
+  - slot_was_set:
+    - type_of_loan: education loan
+  - action: action_fetch_type_of_loan
+  - slot_was_set:
+    - type_of_loan: null
+- story: interactive_story_1
+  steps:
+  - intent: get_atm_card
+  - action: action_get_atm_card
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_2
+  steps:
+  - intent: location
+  - action: action_location
+- story: interactive_story_5
+  steps:
+  - intent: open_account
+  - action: action_ask_account_already_open
+  - intent: affirm
+  - action: action_account_already_exist
+- story: interactive_story_6
+  steps:
+  - intent: open_account
+  - action: action_ask_account_already_open
+  - intent: deny
+  - action: action_create_account
+- story: interactive_story_7
+  steps:
+  - intent: contact
+  - action: action_contact
+- story: interactive_story_7
+  steps:
+  - intent: about_service_center
+  - action: action_about_service_center
+- story: interactive_story_1
+  steps:
+  - intent: about
+  - action: action_about
+- story: interactive_story_2
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: mobile banking
+  - slot_was_set:
+    - type_of_services: mobile banking
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_1
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: about_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: affirm
+  - action: action_show_type_of_loan
+  - intent: about_specific_service
+    entities:
+    - type_of_loan: business loan
+  - slot_was_set:
+    - type_of_loan: business loan
+  - action: action_fetch_type_of_loan
+  - slot_was_set:
+    - type_of_loan: null
+- story: interactive_story_1
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: atm
+  - slot_was_set:
+    - type_of_services: atm
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_2
+  steps:
+  - intent: about_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_show_type_of_loan
+  - intent: about_specific_service
+    entities:
+    - type_of_loan: education loan
+  - slot_was_set:
+    - type_of_loan: education loan
+  - action: action_fetch_type_of_loan
+  - slot_was_set:
+    - type_of_loan: null
+- story: interactive_story_1
+  steps:
+  - intent: about_specific_service
+    entities:
+    - type_of_services: mobile banking
+  - slot_was_set:
+    - type_of_services: mobile banking
+  - action: action_about_specific_service
+  - slot_was_set:
+    - type_of_services: null
+  - intent: about_specific_service
+    entities:
+    - type_of_services: sms banking
+  - slot_was_set:
+    - type_of_services: sms banking
+  - action: action_about_specific_service
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_2
+  steps:
+  - intent: type_of_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_type_of_specific_service
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: affirm
+  - action: action_show_type_of_loan
+  - intent: about_specific_service
+    entities:
+    - type_of_loan: career loan
+  - slot_was_set:
+    - type_of_loan: career loan
+  - action: action_fetch_type_of_loan
+  - slot_was_set:
+    - type_of_loan: null
+- story: interactive_story_1
+  steps:
+  - intent: type_of_specific_service
+    entities:
+    - type_of_services: deposit
+  - slot_was_set:
+    - type_of_services: deposit
+  - action: action_type_of_specific_service
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_1
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: about_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: deny
+  - action: action_no
+- story: interactive_story_2
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: about_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: affirm
+  - action: action_show_type_of_loan
+  - intent: about_specific_service
+    entities:
+    - type_of_loan: education loan
+  - slot_was_set:
+    - type_of_loan: education loan
+  - action: action_fetch_type_of_loan
+  - slot_was_set:
+    - type_of_loan: null
+- story: interactive_story_3
+  steps:
+  - intent: type_of_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_type_of_specific_service
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: deny
+  - action: action_no
+- story: interactive_story_4
+  steps:
+  - intent: type_of_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_type_of_specific_service
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: affirm
+  - action: action_show_type_of_loan
+  - intent: about_specific_service
+    entities:
+    - type_of_loan: industry loan
+  - slot_was_set:
+    - type_of_loan: industry loan
+  - action: action_fetch_type_of_loan
+  - slot_was_set:
+    - type_of_loan: null
+- story: interactive_story_5
+  steps:
+  - intent: interest_rate
+  - action: action_show_type_of_interest
+  - intent: interest_rate
+    entities:
+    - type_of_services: rate loan
+  - slot_was_set:
+    - type_of_services: rate loan
+  - action: action_fetch_type_of_interest
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_6
+  steps:
+  - intent: interest_rate
+  - action: action_show_type_of_interest
+  - intent: interest_rate
+    entities:
+    - type_of_services: rate deposit
+  - slot_was_set:
+    - type_of_services: rate deposit
+  - action: action_fetch_type_of_interest
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_7
+  steps:
+  - intent: interest_rate
+    entities:
+    - type_of_services: rate deposit
+  - slot_was_set:
+    - type_of_services: rate deposit
+  - action: action_fetch_type_of_interest
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_8
+  steps:
+  - intent: interest_rate
+    entities:
+    - type_of_services: rate loan
+  - slot_was_set:
+    - type_of_services: rate loan
+  - action: action_fetch_type_of_interest
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_1
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: atm
+  - slot_was_set:
+    - type_of_services: atm
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_2
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: sms banking
+  - slot_was_set:
+    - type_of_services: sms banking
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_3
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: mobile banking
+  - slot_was_set:
+    - type_of_services: mobile banking
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_4
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: about_specific_service
+    entities:
+    - type_of_services: remittance
+  - slot_was_set:
+    - type_of_services: remittance
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_5
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: health insurance
+  - slot_was_set:
+    - type_of_services: health insurance
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_6
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: about_specific_service
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+  - action: action_ask_want_loan
+  - intent: deny
+  - action: action_no
+- story: interactive_story_7
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: deposit
+  - slot_was_set:
+    - type_of_services: deposit
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_1
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: deposit
+  - slot_was_set:
+    - type_of_services: deposit
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_2
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: other services
+  - slot_was_set:
+    - type_of_services: other services
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
+- story: interactive_story_1
+  steps:
+  - intent: services
+  - action: action_show_type_of_services
+  - intent: services
+    entities:
+    - type_of_services: deposit
+  - slot_was_set:
+    - type_of_services: deposit
+  - action: action_fetch_type_of_services
+  - slot_was_set:
+    - type_of_services: null
