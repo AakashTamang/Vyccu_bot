@@ -418,3 +418,40 @@ stories:
   - action: action_fetch_type_of_services
   - slot_was_set:
     - type_of_services: null
+
+- story: interactive_story_1
+  steps:
+  - intent: interest_rate
+    entities:
+    - type_of_services: loan
+  - slot_was_set:
+    - type_of_services: loan
+  - action: action_fetch_type_of_interest
+  - slot_was_set:
+    - type_of_services: null
+
+- story: interactive_story_2
+  steps:
+  - intent: interest_rate
+    entities:
+    - type_of_services: deposit
+  - slot_was_set:
+    - type_of_services: deposit
+  - action: action_fetch_type_of_interest
+  - slot_was_set:
+    - type_of_services: null
+
+- story: interactive_story_1
+  steps:
+  - intent: affirm
+  - action: action_out_of_scope
+
+- story: interactive_story_2
+  steps:
+  - intent: deny
+  - action: action_out_of_scope
+
+- story: interactive_story_2
+  steps:
+  - intent: after_greet
+  - action: action_after_greet

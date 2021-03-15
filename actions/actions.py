@@ -190,6 +190,17 @@ class Greeting(Action):
 		dispatcher.utter_message(text = reply)
 		return []
 
+class AfterGreeting(Action):
+	def name(self):
+		return "action_after_greet"
+	
+	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		messages = ["I am fine. How can we help you.",
+					"I am doing very well. How can we assist you."]
+		reply = random.choice(messages)
+		dispatcher.utter_message(text = reply)
+		return []
+
 class Goodbye(Action):
 	def name(self):
 		return "action_goodbye"

@@ -1,50 +1,31 @@
-version: "2.0"
-
-actions:
-  - action_about
-  - action_about_service_center
-  - action_about_specific_service
-  - action_account_already_exist
-  - action_ask_account_already_open
-  - action_ask_want_loan
-  - action_contact
-  - action_create_account
-  - action_fetch_type_of_interest
-  - action_fetch_type_of_loan
-  - action_fetch_type_of_services
-  - action_get_atm_card
-  - action_goodbye
-  - action_greeting
-  - action_handle_fallback
-  - action_location
-  - action_no
-  - action_out_of_scope
-  - action_service_center_list
-  - action_show_type_of_interest
-  - action_show_type_of_loan
-  - action_show_type_of_services
-  - action_type_of_specific_service
-
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - services
-  - deny
-  - about_specific_service
-  - interest_rate
-  - type_of_specific_service
-  - affirm
-  - about
-  - contact
-  - location
-  - get_atm_card
-  - open_account
-  - about_service_center
-  - greeting
-  - goodbye
-  - out_of_scope
-
+- affirm
+- deny
+- interest_rate
+- services
+- about_specific_service
+- type_of_specific_service
+- about
+- contact
+- location
+- get_atm_card
+- open_account
+- about_service_center
+- greeting
+- after_greet
+- goodbye
+- out_of_scope
+entities:
+- type_of_loan
+- type_of_services
 slots:
   type_of_loan:
     type: categorical
+    influence_conversation: true
     values:
     - agriculture loan
     - business loan
@@ -53,9 +34,9 @@ slots:
     - hire purchase loan
     - home loan
     - industry loan
-    - __other__
   type_of_services:
     type: categorical
+    influence_conversation: true
     values:
     - atm
     - sms banking
@@ -67,12 +48,28 @@ slots:
     - rate loan
     - rate deposit
     - other services
-    - __other__
-
-entities:
-  - type_of_loan
-  - type_of_services
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+- action_about
+- action_about_service_center
+- action_about_specific_service
+- action_account_already_exist
+- action_ask_account_already_open
+- action_ask_want_loan
+- action_contact
+- action_create_account
+- action_fetch_type_of_interest
+- action_fetch_type_of_loan
+- action_fetch_type_of_services
+- action_get_atm_card
+- action_goodbye
+- action_greeting
+- action_handle_fallback
+- action_location
+- action_no
+- action_after_greet
+- action_out_of_scope
+- action_service_center_list
+- action_show_type_of_interest
+- action_show_type_of_loan
+- action_show_type_of_services
+- action_type_of_specific_service

@@ -11,6 +11,24 @@ nlu:
     - good morning
     - good evening
     - good afternoon
+    - yo man
+    - yo maan
+    - yo
+    - yo buddy
+    - yo yo
+    - whats up dude
+    - hey dude
+- intent: after_greet
+  examples: |
+    - how are you
+    - hi how are you
+    - hey how you doing
+    - how u doing
+    - are you fine
+    - hey are you fine
+    - good morning are you fine
+    - are you ok
+    - hey buddy how are you
 - intent: goodbye
   examples: |
     - bye
@@ -29,6 +47,9 @@ nlu:
     - Okay ,thank you
     - okay, thank you
     - Goodbye
+    - thanks
+    - thank you
+    - good bye
 - intent: out_of_scope
   examples: |
     - I can't get enough information.
@@ -59,6 +80,18 @@ nlu:
     - asshole
     - you bitch
     - bitch
+    - fucking shit
+    - you piece of shit
+    - is this bank
+    - haahah hahaha
+    - what is the power of earth
+    - what is the size of moon
+    - tell me a joke
+    - sing me a song
+    - i want to hear a story
+    - what is your salary
+    - show me the map of Nepal
+    - show me the places to visit
 - intent: about
   examples: |
     - what is this company
@@ -274,6 +307,10 @@ nlu:
     - yes i already have an account
     - i do have an account
     - i do have an account in vyccu
+    - ok
+    - ok sir
+    - ok dude
+    - ok ok
 - intent: deny
   examples: |
     - no
@@ -321,13 +358,14 @@ nlu:
     - what is the rate of interest for [deposit](type_of_services) in vyccu
     - list the different rate for interest
     - rate of interests
-    - rate [loan](type_of_services)
     - interest rate of [deposit](type_of_services)
     - find interest rate
     - check interest rate
     - check rate for the interests
     - what is the rate of interest for [deposit](type_of_services)
     - i want to get the interest rate for the [loans]{"entity": "type_of_services", "value": "loan"}
+    - interest rate of [loan](type_of_services)
+    - i wanna know the rate for [deposit](type_of_services)
 - intent: location
   examples: |
     - Where is the location of this company?

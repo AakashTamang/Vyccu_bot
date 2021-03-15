@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: about
   - action: action_about
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_out_of_scope
