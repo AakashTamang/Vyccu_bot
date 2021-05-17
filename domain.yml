@@ -103,9 +103,3 @@ forms:
     - type: from_text
     email:
     - type: from_text
-  contact_form:
-    contact_number:
-    - type: from_text
-  email_form:
-    email:
-    - type: from_text

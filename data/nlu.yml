@@ -49,6 +49,8 @@ nlu:
     - Goodbye
     - thanks
     - thank you
+    - see you soon
+    - see ya
 - intent: out_of_scope
   examples: |
     - I can't get enough information.

@@ -451,35 +451,6 @@ stories:
   steps:
   - intent: out_of_scope
   - action: action_after_out_of_scope
-  - intent: form_email
-  - action: email_form
-  - active_loop: email_form
-  - slot_was_set:
-    - requested_slot: email
-  - slot_was_set:
-    - email: its dumjanaakash@hotmail.com
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_form_submitted
-  - action: action_restart
-
-- story: interactive_story_2
-  steps:
-  - intent: out_of_scope
-  - action: action_after_out_of_scope
-  - intent: form_contact
-  - action: contact_form
-  - active_loop: contact_form
-  - slot_was_set:
-    - requested_slot: contact_number
-  - slot_was_set:
-    - contact_number: '9800112365'
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_form_submitted
-  - action: action_restart
 
 - story: interactive_story_1
   steps:

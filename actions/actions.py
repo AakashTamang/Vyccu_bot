@@ -243,17 +243,17 @@ class AfterOutOfScope(Action):
 		return "action_after_out_of_scope"
 
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		messages = ['We are sorry for not being able to understand you. Could you provide us with one of your contact number so that we could help you properly?',
-					"Sorry, I don't think I can help you. Can you give us one of your contant detail so that we could help you properly?"]
-		buttons = [
-			{"title":"Email Address", "payload":"/form_email"},
-			{"title":"Contact Number", "payload":"/form_contact"}
-		]
+		messages = ['We are sorry for not being able to understand you. Could you provide us your contact details so that we could help you properly?',
+					"Sorry, I don't think I can help you. Can you give us your contant detail so that we could help you properly?"]
+		# buttons = [
+		# 	{"title":"Email Address", "payload":"/form_email"},
+		# 	{"title":"Contact Number", "payload":"/form_contact"}
+		# ]
 		reply = random.choice(messages)
 		attachment = {
 			"query_response": reply,
-			"data":[{"buttons":buttons}],
-			"type":"message_with_buttons",
+			"data":[],
+			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
 		# dispatcher.utter_message(attachment=attachment,quick_replies=buttons)
@@ -271,7 +271,7 @@ class AskFirstName(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"normal_message",
+			"type":"message_with_form",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
@@ -288,7 +288,7 @@ class AskLastName(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"normal_message",
+			"type":"message_with_form",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
@@ -305,7 +305,7 @@ class AskContactNumner(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"normal_message",
+			"type":"message_with_form",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
@@ -322,7 +322,7 @@ class AskEmailAddress(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"normal_message",
+			"type":"message_with_form",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
