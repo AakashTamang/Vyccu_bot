@@ -49,7 +49,6 @@ nlu:
     - Goodbye
     - thanks
     - thank you
-    - good bye
 - intent: out_of_scope
   examples: |
     - I can't get enough information.
@@ -92,6 +91,40 @@ nlu:
     - what is your salary
     - show me the map of Nepal
     - show me the places to visit
+    - haha ahahah hahaha
+    - dfsdhfsd fsdfsdf
+- intent: form_details
+  examples: |
+    - first name is David
+    - last name is Tamang
+    - my first name is Ram
+    - my last name is Shrestha
+    - Bishnu
+    - Chettri
+    - Aakash
+    - Tamang
+    - aakash
+    - tamang
+    - Shiva
+    - KC
+- intent: form_contact
+  examples: |
+    - my contact numner is 9843208745
+    - my mobile number 9874120356
+    - the contact number is 9840123777
+    - 9801234789
+    - 9800112365
+    - 9841012365
+    - 9804777789
+- intent: form_email
+  examples: |
+    - my email address is dumjanaakash@gmai.com
+    - email is dumjan@yahoo.com
+    - aakash@hotmail.com
+    - dumjanaakash@gmail.com
+    - its dumjanaakash@hotmail.com
+    - hero@gmail.com
+    - shiva@hotmail.com
 - intent: about
   examples: |
     - what is this company
@@ -289,6 +322,9 @@ nlu:
     - Web address
     - website
     - phone number of vyccu
+    - how to contact you
+    - i want to contact the office
+    - i want your contact
 - intent: open_account
   examples: |
     - i want to open an account

@@ -15,4 +15,23 @@ rules:
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:
   - intent: nlu_fallback
-  - action: action_out_of_scope
+  - action: action_after_out_of_scope
+
+# rule to activate the form
+- rule: Activate form
+  steps:
+  - intent: contact
+  - action: action_contact
+  - action: user_form
+  - active_loop: user_form
+
+- rule: Submit form
+  condition:
+  - active_loop: user_form
+  steps:
+  - action: user_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_form_submitted
+  - action: action_restart

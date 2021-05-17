@@ -3,6 +3,11 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- form_details
+- contact
+- form_email
+- form_contact
+- out_of_scope
 - affirm
 - deny
 - interest_rate
@@ -10,7 +15,6 @@ intents:
 - about_specific_service
 - type_of_specific_service
 - about
-- contact
 - location
 - get_atm_card
 - open_account
@@ -18,11 +22,22 @@ intents:
 - greeting
 - after_greet
 - goodbye
-- out_of_scope
 entities:
 - type_of_loan
 - type_of_services
 slots:
+  first_name:
+    type: text
+    influence_conversation: true
+  last_name:
+    type: text
+    influence_conversation: true
+  contact_number:
+    type: text
+    influence_conversation: true
+  email:
+    type: text
+    influence_conversation: true
   type_of_loan:
     type: categorical
     influence_conversation: true
@@ -53,23 +68,44 @@ actions:
 - action_about_service_center
 - action_about_specific_service
 - action_account_already_exist
+- action_after_greet
+- action_after_out_of_scope
 - action_ask_account_already_open
+- action_ask_contact_number
+- action_ask_email
+- action_ask_first_name
+- action_ask_last_name
 - action_ask_want_loan
 - action_contact
 - action_create_account
 - action_fetch_type_of_interest
 - action_fetch_type_of_loan
 - action_fetch_type_of_services
+- action_form_submitted
 - action_get_atm_card
 - action_goodbye
 - action_greeting
-- action_handle_fallback
 - action_location
 - action_no
-- action_after_greet
 - action_out_of_scope
 - action_service_center_list
 - action_show_type_of_interest
 - action_show_type_of_loan
 - action_show_type_of_services
 - action_type_of_specific_service
+forms:
+  user_form:
+    first_name:
+    - type: from_text
+    last_name:
+    - type: from_text
+    contact_number:
+    - type: from_text
+    email:
+    - type: from_text
+  contact_form:
+    contact_number:
+    - type: from_text
+  email_form:
+    email:
+    - type: from_text

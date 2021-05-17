@@ -19,8 +19,7 @@ class ActionShowTypeOfLoan(Action):
 	def name(self):
 		return 'action_show_type_of_loan'
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		# loan_type = tracker.get_slot('agriculture loan')
-		message = "VYCCU Savings and Credit Cooperative Limited provides following type of loans to it's customers."
+		reply = "VYCCU Savings and Credit Cooperative Limited provides following type of loans to it's customers."
 		buttons = [{'title': 'Agriculture Loan',
 				   'payload': '{}'.format('agriculture loan')},
 				  {'title': 'Career Loan',
@@ -36,7 +35,14 @@ class ActionShowTypeOfLoan(Action):
 				  {'title': 'Industry Loan',
 				   'payload': '{}'.format('industry loan')}   
 				   ]
-		dispatcher.utter_message(text=message, quick_replies=buttons)
+		attachment = {
+			"query_response": reply,
+			"data":[{"buttons":buttons}],
+			"type":"message_with_buttons",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply, quick_replies=buttons)
+		# dispatcher.utter_message(text=reply)
 		return []
 
 
@@ -51,18 +57,31 @@ class FetchTypeOfLoan(Action):
 			messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
 				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
 			reply = random.choice(messages)
+			attachment = {
+				"query_response": reply,
+				"data":[],
+				"type":"normal_message",
+				"data_fetch_status": "success"
+			}
 			dispatcher.utter_message(text=reply)
 			return [UserUtteranceReverted()]
+		
 		loan_link = "<a href = 'http://vyccu.org.np/services/loans'>loan</a>"
-		response = f"VYCCU Savings and Credit Cooperative Ltd provides attractive {loan_type} . You can get more info on {loan_type} from {loan_link}"
-		dispatcher.utter_message(text=response)
+		reply = f"VYCCU Savings and Credit Cooperative Ltd provides attractive {loan_type} . You can get more info on {loan_type} from {loan_link}"
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return [SlotSet('type_of_loan', None)]
 
 class ActionShowTypeOfServices(Action):
 	def name(self):
 		return 'action_show_type_of_services'
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		message = "We facilitate following type of services."
+		reply = "We facilitate following type of services."
 		buttons = [{'title': 'ATM',
 				   'payload': '{}'.format('atm')},
 				  {'title': 'SMS Banking',
@@ -80,7 +99,14 @@ class ActionShowTypeOfServices(Action):
 				  {'title': 'Other Services',
 				   'payload': '{}'.format('other services')}   
 				   ]
-		dispatcher.utter_message(text=message, quick_replies=buttons)
+		attachment = {
+			"query_response": reply,
+			"data":[{"buttons":buttons}],
+			"type":"message_with_buttons",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply, quick_replies=buttons)
+		# dispatcher.utter_message(text=reply)
 		return []
 
 class FetchTypeOfServices(Action):
@@ -105,11 +131,23 @@ class FetchTypeOfServices(Action):
 			messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
 				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
 			reply = random.choice(messages)
+			attachment = {
+				"query_response": reply,
+				"data":[],
+				"type":"normal_message",
+				"data_fetch_status": "success"
+			}
 			dispatcher.utter_message(text=reply)
 			return [UserUtteranceReverted()]
-		# service_link = "<a href = 'http://vyccu.org.np/services/'>service</a>"
-		response = "Oh you want to get {}. We are happy to serve you. Learn more about {} from {} ".format(service_type,service_type,service_link)
-		dispatcher.utter_message(text=response)
+
+		reply = "Oh you want to get {}. We are happy to serve you. Learn more about {} from {} ".format(service_type,service_type,service_link)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return [SlotSet('type_of_services', None)]
 
 
@@ -117,13 +155,20 @@ class ActionShowTypeOfInterest(Action):
 	def name(self):
 		return 'action_show_type_of_interest'
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		message = "Interest rate varies for following services"
+		reply = "Interest rate varies for following services"
 		buttons = [{'title': 'Loan',
 				   'payload': '{}'.format('rate loan')},
 				  {'title': 'Deposit',
 				   'payload': '{}'.format('rate deposit')}   
 				   ]
-		dispatcher.utter_message(text=message, quick_replies=buttons)
+		attachment = {
+			"query_response": reply,
+			"data":[{"buttons":buttons}],
+			"type":"message_with_buttons",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply, quick_replies=buttons)
+		# dispatcher.utter_message(text=reply)
 		return []
 
 class FetchTypeOfInterest(Action):
@@ -141,10 +186,23 @@ class FetchTypeOfInterest(Action):
 			messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
 				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
 			reply = random.choice(messages)
+			attachment = {
+				"query_response": reply,
+				"data":[],
+				"type":"normal_message",
+				"data_fetch_status": "success"
+			}
 			dispatcher.utter_message(text=reply)
 			return [UserUtteranceReverted()]
-		response = "Oh, you want to check interest rate for {}. Get detailed information about our interest rates at <a href='http://vyccu.org.np/interest-rates/'>Interest Rate</a>".format(interest_type)
-		dispatcher.utter_message(text=response)
+		
+		reply = "Oh, you want to check interest rate for {}. Get detailed information about our interest rates at <a href='http://vyccu.org.np/interest-rates/'>Interest Rate</a>".format(interest_type)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return [SlotSet('type_of_services', None)]
 
 class About(Action):
@@ -154,7 +212,13 @@ class About(Action):
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		messages = ['VYCCU Savings and Credit Cooperative Limited is a primary-level single-purpose cooperative organization . You can get more info on <a href = "http://vyccu.org.np/category/our-profile-2">vyccu.org.np/our-profile</a>']
 		reply = random.choice(messages)
-		dispatcher.utter_message(text = reply)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return []
 
 class OutOfScope(Action):
@@ -165,19 +229,127 @@ class OutOfScope(Action):
 		messages = ['Sorry I didn’t catch that word? Could you tell me more clearly?',
 					'I am sorry I did not understand? Can you tell again?']
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return [UserUtteranceReverted()]
 
-class ActionDefaultFallback(Action):
-	def name(self) -> Text:
-		return "action_handle_fallback"
+class AfterOutOfScope(Action):
+	def name(self):
+		return "action_after_out_of_scope"
 
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
-				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
+		messages = ['We are sorry for not being able to understand you. Could you provide us with one of your contact number so that we could help you properly?',
+					"Sorry, I don't think I can help you. Can you give us one of your contant detail so that we could help you properly?"]
+		buttons = [
+			{"title":"Email Address", "payload":"/form_email"},
+			{"title":"Contact Number", "payload":"/form_contact"}
+		]
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[{"buttons":buttons}],
+			"type":"message_with_buttons",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply,quick_replies=buttons)
+		# dispatcher.utter_message(text=reply)
+		return []
+
+class AskFirstName(Action):
+	def name(self):
+		return "action_ask_first_name"
+
+	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		messages = ['Please give your First name',
+					'Provide us your First name']
+		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
-		return [UserUtteranceReverted()]
+		return []
+
+class AskLastName(Action):
+	def name(self):
+		return "action_ask_last_name"
+
+	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		messages = ['Please give your Last name',
+					'Provide us your Last name']
+		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
+		return []
+
+class AskContactNumner(Action):
+	def name(self):
+		return "action_ask_contact_number"
+
+	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		messages = ['Please give your contact number',
+					'Provide us your contact number']
+		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
+		return []
+
+class AskEmailAddress(Action):
+	def name(self):
+		return "action_ask_email"
+
+	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		messages = ['Please give your email',
+					'Provide us your email']
+		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
+		return []
+
+class FormSubmitted(Action):
+	def name(self):
+		return "action_form_submitted"
+
+	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		f_name = tracker.get_slot('first_name')
+		l_name = tracker.get_slot('last_name')
+		if f_name != None or l_name != None:
+			messages = [f'Thank you {f_name} {l_name}. Your form has been submitted successfully. We will contact you very soon.',
+						f'Thank you {f_name} {l_name} for your information. We will contact you as soon as possible.']
+		else:
+			messages = ['Thank you. Your form has been submitted successfully. We will contact you very soon.',
+						'Thank you for your information. We will contact you as soon as possible.']
+		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
+		return []
 
 class Greeting(Action):
 	def name(self):
@@ -187,7 +359,13 @@ class Greeting(Action):
 		messages = ["Hi there. It's such a pleasure to have you here. Welcome to VYCCU saving and credit co-operative Ltd. How can we help you.",
 					"Hello, welcome to VYCCU saving and credit co-operative Ltd. How can we assist you."]
 		reply = random.choice(messages)
-		dispatcher.utter_message(text = reply)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return []
 
 class AfterGreeting(Action):
@@ -198,7 +376,13 @@ class AfterGreeting(Action):
 		messages = ["I am fine. How can we help you.",
 					"I am doing very well. How can we assist you."]
 		reply = random.choice(messages)
-		dispatcher.utter_message(text = reply)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return []
 
 class Goodbye(Action):
@@ -209,6 +393,12 @@ class Goodbye(Action):
 		messages = ['Thank you, I am happy to help you. For more details about us please visit our website <a href="http://vyccu.org.np">vyccu.org.np</a>',
 					'I hope I was helpful for you. To know more about us you can visit our website <a href="http://vyccu.org.np">vyccu.org.np</a>']
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -220,6 +410,12 @@ class Location(Action):
 		messages = ['VYCCU Savings and Credit Cooperative Limited is located in Bijaynagar, Gaindakot-05, Nawalpur. Folllow us at google maps <a href="https://www.google.com/maps/dir//27.7015019,84.3871719/@27.701502,84.387172,17z?hl=en-US">maps</a>',
 					'You can visit us at Bijaynagar, Gaindakot-05, Nawalpur. Follow us at google maps <a href="https://www.google.com/maps/dir//27.7015019,84.3871719/@27.701502,84.387172,17z?hl=en-US">maps</a>']
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -228,8 +424,14 @@ class Contact(Action):
 		return "action_contact"
 
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		messages = ['To know more about us and our services, follow us at <a href="http://vyccu.org.np/contact-us/">vyccu.org.np/contact</a> \nEmail:vyccu@vyccu.org.np \nHead Office Bijaynagar, Gaindakot-05, Nawalpur \nPhone: 078-502601, 078-501364, 078-503162, 078-503104']
+		messages = ['To know more about us and our services, follow us at <a href="http://vyccu.org.np/contact-us/">vyccu.org.np/contact</a> \nEmail:vyccu@vyccu.org.np \nHead Office Bijaynagar, Gaindakot-05, Nawalpur \nPhone: 078-502601, 078-501364, 078-503162, 078-503104 \nPlease provide us with your following details so that we can contact you further.']
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -241,6 +443,12 @@ class AboutServiceCenter(Action):
 		messages = ['We have 11 service centers. You can get more info on service centers from <a href = "http://vyccu.org.np/service-center">vyccu.org.np/service-centers</a>',
 					'The information about our service centers can be found in this link: <a href = "http://vyccu.org.np/service-center">vyccu.org.np/service-centers</a>']
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -251,6 +459,12 @@ class AskAccountAlreadyOpen(Action):
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		messages = ["Do you have a saving account with VYCCU saving and credit co-operative Ltd.?"]
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -262,6 +476,12 @@ class AccountAlreadyExist(Action):
 		messages = ["Dear customer, as you are already an existing customer of VYCCU saving and credit co-operative Ltd. You cannot open a new account with us as per local regulations. We will keep you posted here as we are adding many new exciting services soon.",
 					"Sir, since an account on your name already exist in VYCCU saving and credit co-operative Ltd. we cannot create a new account for you."]
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -272,6 +492,12 @@ class CreateAccount(Action):
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		messages = ["Ok, now lets create an account for you."]
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -286,7 +512,14 @@ class TypesofDeposit(Action):
 				  {'title': 'No',
 				   'payload': '{}'.format('no')},   
 				   ]
+		attachment = {
+			"query_response": reply,
+			"data":[{"buttons":buttons}],
+			"type":"message_with_buttons",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply,quick_replies=buttons)
+		# dispatcher.utter_message(text=reply)
 		return []
 
 class AfterNo(Action):
@@ -296,6 +529,12 @@ class AfterNo(Action):
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		messages = ["Ok sir. Are there any ways in which we can help you?","Ok sir. Is there anything more you want to know?"]
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return []
 
@@ -306,6 +545,12 @@ class GetATMCard(Action):
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		messages = ['Please contact to your nearest Service center to get your ATM card. The information on our service center can be found in this link: <a href = "http://vyccu.org.np/service-center">vyccu.org.np/service-centers</a>']
 		reply = random.choice(messages)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
 		dispatcher.utter_message(text=reply)
 		return [SlotSet('type_of_services', None)]
 
@@ -325,14 +570,26 @@ class AboutSpecificService(Action):
 			"mobile banking": "Dear Member, you can know about the mobile banking from this link <a href = 'http://vyccu.org.np/services/other-services'>Mobile Banking Service</a>",
 		}
 		try:
-			response = type_list[service_type]
+			reply = type_list[service_type]
 		except:
 			messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
 				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
 			reply = random.choice(messages)
+			attachment = {
+				"query_response": reply,
+				"data":[],
+				"type":"normal_message",
+				"data_fetch_status": "success"
+			}
 			dispatcher.utter_message(text=reply)
 			return [UserUtteranceReverted()]
-		dispatcher.utter_message(text=response)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return [SlotSet('type_of_services', None)]
 
 class TypeOfSpecificService(Action):
@@ -346,12 +603,24 @@ class TypeOfSpecificService(Action):
 			"loan": "The various types of loan provided by us are: - \n1. Agriculture Loan \n2. Business Loan \n3. Career Loan \n4. Education Loan \n5. Hire Purchase Loan \n6. Home Loan \n7. Industry Loan",
 		}
 		try:
-			response = type_list[service_type]
+			reply = type_list[service_type]
 		except:
 			messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
 				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
 			reply = random.choice(messages)
+			attachment = {
+				"query_response": reply,
+				"data":[],
+				"type":"normal_message",
+				"data_fetch_status": "success"
+			}
 			dispatcher.utter_message(text=reply)
 			return [UserUtteranceReverted()]
-		dispatcher.utter_message(text=response)
+		attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+		dispatcher.utter_message(text=reply)
 		return [SlotSet('type_of_services', None)]

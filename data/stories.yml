@@ -4,14 +4,14 @@ stories:
   steps:
   - intent: greeting
   - action: action_greeting
+- story: interactive_story_1
+  steps:
+  - intent: after_greet
+  - action: action_after_greet
 - story: Goodbye Story
   steps:
   - intent: goodbye
   - action: action_goodbye
-- story: story2
-  steps:
-  - intent: out_of_scope
-  - action: action_out_of_scope
 - story: interactive_story_1
   steps:
   - intent: type_of_specific_service
@@ -55,10 +55,6 @@ stories:
   - action: action_ask_account_already_open
   - intent: deny
   - action: action_create_account
-- story: interactive_story_7
-  steps:
-  - intent: contact
-  - action: action_contact
 - story: interactive_story_7
   steps:
   - intent: about_service_center
@@ -451,7 +447,64 @@ stories:
   - intent: deny
   - action: action_out_of_scope
 
+- story: interactive_story_1
+  steps:
+  - intent: out_of_scope
+  - action: action_after_out_of_scope
+  - intent: form_email
+  - action: email_form
+  - active_loop: email_form
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: its dumjanaakash@hotmail.com
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_form_submitted
+  - action: action_restart
+
 - story: interactive_story_2
   steps:
-  - intent: after_greet
-  - action: action_after_greet
+  - intent: out_of_scope
+  - action: action_after_out_of_scope
+  - intent: form_contact
+  - action: contact_form
+  - active_loop: contact_form
+  - slot_was_set:
+    - requested_slot: contact_number
+  - slot_was_set:
+    - contact_number: '9800112365'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_form_submitted
+  - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - intent: contact
+  - action: action_contact
+  - action: user_form
+  - active_loop: user_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: Shiva
+  - slot_was_set:
+    - requested_slot: last_name
+  - slot_was_set:
+    - last_name: KC
+  - slot_was_set:
+    - requested_slot: contact_number
+  - slot_was_set:
+    - contact_number: '9804777789'
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: shiva@hotmail.com
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_form_submitted
+  - action: action_restart
