@@ -41,8 +41,8 @@ class ActionShowTypeOfLoan(Action):
 			"type":"message_with_buttons",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply, quick_replies=buttons)
-		# dispatcher.utter_message(text=reply)
+		# dispatcher.utter_message(attachment=attachment, quick_replies=buttons)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 
@@ -63,7 +63,7 @@ class FetchTypeOfLoan(Action):
 				"type":"normal_message",
 				"data_fetch_status": "success"
 			}
-			dispatcher.utter_message(text=reply)
+			dispatcher.utter_message(attachment=attachment)
 			return [UserUtteranceReverted()]
 		
 		loan_link = "<a href = 'http://vyccu.org.np/services/loans'>loan</a>"
@@ -74,7 +74,7 @@ class FetchTypeOfLoan(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_loan', None)]
 
 class ActionShowTypeOfServices(Action):
@@ -105,8 +105,8 @@ class ActionShowTypeOfServices(Action):
 			"type":"message_with_buttons",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply, quick_replies=buttons)
-		# dispatcher.utter_message(text=reply)
+		# dispatcher.utter_message(attachment=attachment, quick_replies=buttons)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class FetchTypeOfServices(Action):
@@ -137,7 +137,7 @@ class FetchTypeOfServices(Action):
 				"type":"normal_message",
 				"data_fetch_status": "success"
 			}
-			dispatcher.utter_message(text=reply)
+			dispatcher.utter_message(attachment=attachment)
 			return [UserUtteranceReverted()]
 
 		reply = "Oh you want to get {}. We are happy to serve you. Learn more about {} from {} ".format(service_type,service_type,service_link)
@@ -147,7 +147,7 @@ class FetchTypeOfServices(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_services', None)]
 
 
@@ -167,8 +167,8 @@ class ActionShowTypeOfInterest(Action):
 			"type":"message_with_buttons",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply, quick_replies=buttons)
-		# dispatcher.utter_message(text=reply)
+		# dispatcher.utter_message(attachment=attachment, quick_replies=buttons)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class FetchTypeOfInterest(Action):
@@ -192,7 +192,7 @@ class FetchTypeOfInterest(Action):
 				"type":"normal_message",
 				"data_fetch_status": "success"
 			}
-			dispatcher.utter_message(text=reply)
+			dispatcher.utter_message(attachment=attachment)
 			return [UserUtteranceReverted()]
 		
 		reply = "Oh, you want to check interest rate for {}. Get detailed information about our interest rates at <a href='http://vyccu.org.np/interest-rates/'>Interest Rate</a>".format(interest_type)
@@ -202,7 +202,7 @@ class FetchTypeOfInterest(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_services', None)]
 
 class About(Action):
@@ -218,7 +218,7 @@ class About(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class OutOfScope(Action):
@@ -235,7 +235,7 @@ class OutOfScope(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [UserUtteranceReverted()]
 
 class AfterOutOfScope(Action):
@@ -256,8 +256,8 @@ class AfterOutOfScope(Action):
 			"type":"message_with_buttons",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply,quick_replies=buttons)
-		# dispatcher.utter_message(text=reply)
+		# dispatcher.utter_message(attachment=attachment,quick_replies=buttons)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AskFirstName(Action):
@@ -274,7 +274,7 @@ class AskFirstName(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AskLastName(Action):
@@ -291,7 +291,7 @@ class AskLastName(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AskContactNumner(Action):
@@ -308,7 +308,7 @@ class AskContactNumner(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AskEmailAddress(Action):
@@ -325,7 +325,7 @@ class AskEmailAddress(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class FormSubmitted(Action):
@@ -348,7 +348,7 @@ class FormSubmitted(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class Greeting(Action):
@@ -365,7 +365,7 @@ class Greeting(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AfterGreeting(Action):
@@ -382,7 +382,7 @@ class AfterGreeting(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class Goodbye(Action):
@@ -399,7 +399,7 @@ class Goodbye(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class Location(Action):
@@ -416,7 +416,7 @@ class Location(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class Contact(Action):
@@ -432,7 +432,7 @@ class Contact(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AboutServiceCenter(Action):
@@ -449,7 +449,7 @@ class AboutServiceCenter(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AskAccountAlreadyOpen(Action):
@@ -465,7 +465,7 @@ class AskAccountAlreadyOpen(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AccountAlreadyExist(Action):
@@ -482,7 +482,7 @@ class AccountAlreadyExist(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class CreateAccount(Action):
@@ -498,7 +498,7 @@ class CreateAccount(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class TypesofDeposit(Action):
@@ -518,8 +518,8 @@ class TypesofDeposit(Action):
 			"type":"message_with_buttons",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply,quick_replies=buttons)
-		# dispatcher.utter_message(text=reply)
+		# dispatcher.utter_message(attachment=attachment,quick_replies=buttons)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class AfterNo(Action):
@@ -535,7 +535,7 @@ class AfterNo(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return []
 
 class GetATMCard(Action):
@@ -551,7 +551,7 @@ class GetATMCard(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_services', None)]
 
 class AboutSpecificService(Action):
@@ -581,7 +581,7 @@ class AboutSpecificService(Action):
 				"type":"normal_message",
 				"data_fetch_status": "success"
 			}
-			dispatcher.utter_message(text=reply)
+			dispatcher.utter_message(attachment=attachment)
 			return [UserUtteranceReverted()]
 		attachment = {
 			"query_response": reply,
@@ -589,7 +589,7 @@ class AboutSpecificService(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_services', None)]
 
 class TypeOfSpecificService(Action):
@@ -614,7 +614,7 @@ class TypeOfSpecificService(Action):
 				"type":"normal_message",
 				"data_fetch_status": "success"
 			}
-			dispatcher.utter_message(text=reply)
+			dispatcher.utter_message(attachment=attachment)
 			return [UserUtteranceReverted()]
 		attachment = {
 			"query_response": reply,
@@ -622,5 +622,5 @@ class TypeOfSpecificService(Action):
 			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
-		dispatcher.utter_message(text=reply)
+		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_services', None)]
