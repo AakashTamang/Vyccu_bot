@@ -253,7 +253,7 @@ class AfterOutOfScope(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"normal_message",
+			"type":"message_with_form",
 			"data_fetch_status": "success"
 		}
 		# dispatcher.utter_message(attachment=attachment,quick_replies=buttons)
@@ -271,7 +271,7 @@ class AskFirstName(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"message_with_form",
+			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
@@ -288,7 +288,7 @@ class AskLastName(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"message_with_form",
+			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
@@ -305,7 +305,7 @@ class AskContactNumner(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"message_with_form",
+			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
@@ -322,7 +322,7 @@ class AskEmailAddress(Action):
 		attachment = {
 			"query_response": reply,
 			"data":[],
-			"type":"message_with_form",
+			"type":"normal_message",
 			"data_fetch_status": "success"
 		}
 		dispatcher.utter_message(attachment=attachment)
