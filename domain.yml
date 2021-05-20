@@ -4,9 +4,9 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - form_details
-- contact
-- form_email
 - form_contact
+- contact
+- email_id
 - out_of_scope
 - affirm
 - deny
@@ -25,6 +25,7 @@ intents:
 entities:
 - type_of_loan
 - type_of_services
+- email
 slots:
   first_name:
     type: text
@@ -93,6 +94,7 @@ actions:
 - action_show_type_of_loan
 - action_show_type_of_services
 - action_type_of_specific_service
+- action_email_id
 forms:
   user_form:
     first_name:

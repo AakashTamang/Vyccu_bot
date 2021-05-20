@@ -29,6 +29,12 @@ nlu:
     - good morning are you fine
     - are you ok
     - hey buddy how are you
+    - hi there is everything going fine
+    - are you allright
+    - how healthy are you
+    - how is your mood
+    - how are you feeling today
+    - can you tell me how are you feeling
 - intent: goodbye
   examples: |
     - bye
@@ -51,19 +57,12 @@ nlu:
     - thank you
     - see you soon
     - see ya
+    - thank you for everything
 - intent: out_of_scope
   examples: |
     - I can't get enough information.
-    - This bot did not help me
-    - This bot is useless
-    - Not good
     - You are useless
     - This does not work
-    - Is Rasa bot really smart?
-    - bots are bad
-    - I dont like bots
-    - Is Rasa bot smart?
-    - I can't follow this chatbot
     - what the fuck is going on?
     - What is wrong with this universe?
     - capital city of nepal
@@ -83,7 +82,7 @@ nlu:
     - bitch
     - fucking shit
     - you piece of shit
-    - is this bank
+    - oov oov oov
     - haahah hahaha
     - what is the power of earth
     - what is the size of moon
@@ -93,6 +92,12 @@ nlu:
     - what is your salary
     - show me the map of Nepal
     - show me the places to visit
+    - lets play a game
+    - who will win the euro cup
+    - blasbdfsd blfbsdlfbl sdbf
+    - oov oov
+    - oov
+    - qewq fhgdfg
     - haha ahahah hahaha
     - dfsdhfsd fsdfsdf
 - intent: form_details
@@ -118,15 +123,22 @@ nlu:
     - 9800112365
     - 9841012365
     - 9804777789
-- intent: form_email
+- intent: email_id
   examples: |
-    - my email address is dumjanaakash@gmai.com
-    - email is dumjan@yahoo.com
-    - aakash@hotmail.com
-    - dumjanaakash@gmail.com
-    - its dumjanaakash@hotmail.com
-    - hero@gmail.com
-    - shiva@hotmail.com
+    - my email address is [dumjanaakash@outlook.com](email)
+    - email is [dumjan@yahoo.com](email)
+    - [aakash@outlook.com](email)
+    - [hero@gmail.com](email)
+    - [shiva@hotmail.com](email)
+    - its [aakash.tamang@gmail.com](email)
+    - [ram_123@yahoo.com](email)
+    - [sita_rai976@hotmail.com](email)
+    - [abc123.aaa@gmail.com](email)
+    - [her0123_456@gmail.com](email)
+    - my email id is [shaktiman@gmail.com](email)
+    - my email address is [superman_blackV@yahoo.com](email)
+    - email address [david_beckham007@hotmail.com](email)
+    - [saitama123@hotmail.com](email)
 - intent: about
   examples: |
     - what is this company
@@ -142,6 +154,21 @@ nlu:
     - i want to know about vyccu
     - about vyccu
     - what are you
+    - tell us about yourself
+    - about you
+    - can you tell us about your duty
+    - i want to know what is your job
+    - i want you to tell about yourself
+    - what is this chatbot
+    - is this a chatbot?
+    - what type of chatbot are you
+    - hey man are you a virtual assistant
+    - hi are you a chatbot
+    - are you a chatbot
+    - are you a person
+    - is this a person or a bot
+    - is this a bot
+    - are you bot
 - intent: services
   examples: |
     - Inform me about the services offered by this company.

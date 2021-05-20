@@ -19,10 +19,3 @@ stories:
       bye-bye!
     intent: goodbye
   - action: action_goodbye
-
-- story: out of scope
-  steps:
-  - user: |
-      bla bla bla
-    intent: out_of_scope
-  - action: action_out_of_scope

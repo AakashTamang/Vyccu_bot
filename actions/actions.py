@@ -210,7 +210,7 @@ class About(Action):
 		return "action_about"
 
 	def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		messages = ['VYCCU Savings and Credit Cooperative Limited is a primary-level single-purpose cooperative organization . You can get more info on <a href = "http://vyccu.org.np/category/our-profile-2">vyccu.org.np/our-profile</a>']
+		messages = ['I am your virtual assistant for VYCCU. VYCCU Savings and Credit Cooperative Limited is a primary-level single-purpose cooperative organization . You can get more info on <a href = "http://vyccu.org.np/category/our-profile-2">vyccu.org.np/our-profile</a>']
 		reply = random.choice(messages)
 		attachment = {
 			"query_response": reply,
@@ -256,7 +256,6 @@ class AfterOutOfScope(Action):
 			"type":"message_with_form",
 			"data_fetch_status": "success"
 		}
-		# dispatcher.utter_message(attachment=attachment,quick_replies=buttons)
 		dispatcher.utter_message(attachment=attachment)
 		return []
 
@@ -624,3 +623,33 @@ class TypeOfSpecificService(Action):
 		}
 		dispatcher.utter_message(attachment=attachment)
 		return [SlotSet('type_of_services', None)]
+
+class EmailAddress(Action):
+    def name(self):
+        return "action_email_id"
+
+    def run(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        try:
+            email_id = tracker.get_slot('email')
+        except:
+            messages = ["Sorry, I cannot understand you. Could you repeat it again?", "I am having confusion in understanding it. Would you repeat it please?",
+				"I find it quite ambiguous. Can you tell me again a bit clearly?"]
+            reply = random.choice(messages)
+            attachment = {
+                "query_response": reply,
+                "data":[],
+                "type":"normal_message",
+                "data_fetch_status": "success"
+            }
+            dispatcher.utter_message(attachment=attachment)
+            return [UserUtteranceReverted()]
+        messages = ["Thank you. We will contact you very soon.","Thank you for giving us information. We will contact you soon."]      
+        reply = random.choice(messages)
+        attachment = {
+			"query_response": reply,
+			"data":[],
+			"type":"normal_message",
+			"data_fetch_status": "success"
+		}
+        dispatcher.utter_message(attachment=attachment)
+        return [SlotSet('email', None)]

@@ -479,3 +479,17 @@ stories:
   - active_loop: null
   - action: action_form_submitted
   - action: action_restart
+
+- story: interactive_story_1
+  steps:
+  - intent: out_of_scope
+  - action: action_after_out_of_scope
+  - intent: email_id
+    entities:
+    - email: saitama123@hotmail.com
+  - slot_was_set:
+    - email: saitama123@hotmail.com
+  - action: action_email_id
+  - slot_was_set:
+    - email: null
+  - action: action_restart
