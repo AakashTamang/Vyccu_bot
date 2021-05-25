@@ -67,7 +67,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: mobile banking
   - slot_was_set:
@@ -102,7 +102,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: atm
   - slot_was_set:
@@ -295,7 +295,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: atm
   - slot_was_set:
@@ -307,7 +307,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: sms banking
   - slot_was_set:
@@ -319,7 +319,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: mobile banking
   - slot_was_set:
@@ -343,7 +343,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: health insurance
   - slot_was_set:
@@ -370,7 +370,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: deposit
   - slot_was_set:
@@ -382,7 +382,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: deposit
   - slot_was_set:
@@ -394,7 +394,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: other services
   - slot_was_set:
@@ -406,7 +406,7 @@ stories:
   steps:
   - intent: services
   - action: action_show_type_of_services
-  - intent: services
+  - intent: about_specific_service
     entities:
     - type_of_services: deposit
   - slot_was_set:

@@ -18,6 +18,15 @@ nlu:
     - yo yo
     - whats up dude
     - hey dude
+    - नमस्कार
+    - नमस्ते यार
+    - शुभ प्रभात
+    - नमस्कार! साथी
+    - हेल्लो
+    - नमस्ते
+    - शुभ प्रभात साथी
+    - नमस्कार!
+    - हेल्लो साथी
 - intent: after_greet
   examples: |
     - how are you
@@ -35,6 +44,24 @@ nlu:
     - how is your mood
     - how are you feeling today
     - can you tell me how are you feeling
+    - तिमीलाई कस्तो छ साथी
+    - हजुर्लाई कस्तो छ
+    - के छ हजुर सन्चै हुनुहुन्छ
+    - ठिकै छ साथी?
+    - नमस्कार सन्चै हुनुहुन्छ?
+    - आरामै हजुर?
+    - के छ केटो 
+    - हेल्लो के छ हिरो
+    - के छ साथी
+    - नमस्कार! के छ हजुर
+    - के छ हजुर
+    - हे साथी, तिमीलाई कस्तो छ?
+    - के तपाई ठिक हुनुहुन्छ?
+    - शुभ प्रभात तपाई ठीकै हुनुहुन्छ
+    - तिमी सन्चै छौ
+    - तिमीलाई कस्तो छ
+    - के छ साथी
+    - के छ यार
 - intent: goodbye
   examples: |
     - bye
@@ -58,6 +85,18 @@ nlu:
     - see you soon
     - see ya
     - thank you for everything
+    - धन्यवाद
+    - राम्रोसँग बस्नुहोस
+    - मेरो सहयोगको लागि धेरै धन्यबाद।
+    - मेरो सहयोगको लागि धन्यबाद।
+    - अलविदा
+    - चाडै भेटौला
+    - पछि चाडै भेटौला
+    - हस त धन्यवाद
+    - ठीक छ, म जादै छु
+    - म गए है
+    - ठीक छ मेरो काम सकियो
+    - बाई
 - intent: out_of_scope
   examples: |
     - I can't get enough information.
@@ -100,6 +139,32 @@ nlu:
     - qewq fhgdfg
     - haha ahahah hahaha
     - dfsdhfsd fsdfsdf
+    - म पर्याप्त जानकारी प्राप्त गर्न सक्दिन।
+    - तपाईं बेकार हुनुहुन्छ
+    - यो काम गर्दैन
+    - के भइरहेको छ?
+    - यो ब्रह्माण्डमा के गलत छ?
+    - नेपालको राजधानी शहर
+    - आजकाल के गलत छ?
+    - म धेरै थाकेको छु
+    - म यस बोटसँग कुराकानी गर्न चाहन्न।
+    - यो कुराकानी राम्रो छैन।
+    - किन यति धेरै ब्याज दर?
+    - यो कम्पनी ठगी हो।
+    - खेल खेल्नुहोस्
+    - तिमीलाई कस्तो छ
+    - तिमी सन्चै छौ
+    - हाहाह हाहाहा
+    - पृथ्वीको शक्ति के हो?
+    - चन्द्रमाको आकार कति छ?
+    - मलाई एक ठट्टा भन
+    - मलाई एउटा गीत गाउनुहोस्
+    - म एउटा कथा सुन्न चाहन्छु
+    - तपाईको तलब के हो
+    - मलाई नेपालको नक्शा देखाउनुहोस्
+    - मलाई भ्रमण गर्ने ठाउँहरू देखाउनुहोस्
+    - एउटा खेल खेल्न दिनुहोस्
+    - यस युरो कप जित्ने छ
 - intent: form_details
   examples: |
     - first name is David
@@ -114,6 +179,18 @@ nlu:
     - tamang
     - Shiva
     - KC
+    - पहिलो नाम डेभिड हो
+    - अन्तिम नाम तामाng हो
+    - मेरो पहिलो नाम राम हो
+    - मेरो अन्तिम नाम श्रेष्ठ हो
+    - बिष्णु
+    - छेत्री
+    - आकाश
+    - तामाng
+    - आकाश
+    - तामाng
+    - शिव
+    - खत्री
 - intent: form_contact
   examples: |
     - my contact numner is 9843208745
@@ -123,6 +200,9 @@ nlu:
     - 9800112365
     - 9841012365
     - 9804777789
+    - मेरो सम्पर्क नम्बर 9843208745 हो
+    - मेरो मोबाइल नम्बर 9874120356
+    - सम्पर्क नम्बर 9840123777 हो
 - intent: email_id
   examples: |
     - my email address is [dumjanaakash@outlook.com](email)
@@ -139,6 +219,9 @@ nlu:
     - my email address is [superman_blackV@yahoo.com](email)
     - email address [david_beckham007@hotmail.com](email)
     - [saitama123@hotmail.com](email)
+    - मेरो ईमेल आईडी [shaktiman@gmail.com](email) हो
+    - मेरो ईमेल ठेगाना हो [सुपरमैन_ब्लाकभिडियस_बाइट.कॉम](email)
+    - ईमेल ठेगाना [david_beckham007@hotmail.com](email)
 - intent: about
   examples: |
     - what is this company
@@ -169,6 +252,39 @@ nlu:
     - is this a person or a bot
     - is this a bot
     - are you bot
+    - यो प्रणाली को लागी के हो?
+    - यो को लागी के हो
+    - तपाइको बारेमा भन्नुहोस
+    - तिमि के हो?
+    - यो के हो
+    - तिमी के गर्न सक्छाै
+    - तपाईको काम के हो?
+    - तिम्रो काम के हो
+    - तिमी किन बनेका छौ?
+    - तिमी किन बनेको
+    - के हो यो
+    - यो के हो
+    - तपाइको बारेमा बोल्नुहोस्
+    - आफ्नो बारेमा भन्नुहोस
+    - आफ्नो बारेमा भन
+    - विकु बचत र क्रेडिट सहकारी के हो
+    - म विकु को बारे मा जान्न चाहान्छु
+    - विकु को बारेमा भन
+    - तिमि के हौ
+    - हामीलाई आफ्नो बारेमा बताउनुहोस्
+    - तिम्रो बारेमा भन
+    - तपाई हामीलाई आफ्नो कर्तव्यको बारेमा बताउन सक्नुहुन्छ?
+    - म तपाइँको काम के हो जान्न चाहान्छु
+    - म तपाईको बारेमा बताउन चाहान्छु
+    - यो च्याटबट के हो
+    - यो च्याटबट हो?
+    - तपाई कस्तो किसिमको च्याटबोट हुनुहुन्छ
+    - अरे मानिस तपाईं एक भर्चुअल सहायक हो
+    - नमस्ते तपाईं च्याटबट हुनुहुन्छ
+    - के तपाईं च्याटबट हुनुहुन्छ
+    - के यो व्यक्ति हो वा बोट हो?
+    - यो एक भाँडा हो
+    - तपाइँ बोट हो
 - intent: services
   examples: |
     - Inform me about the services offered by this company.
@@ -176,9 +292,7 @@ nlu:
     - What kind of services are provided by this company?
     - What are the services offered?
     - What type of services do you offer?
-    - [mobile banking](type_of_services)
     - I want to know about the services provided by this company
-    - [SMS banking](type_of_services)
     - What are the services offered by this company?
     - What services do you offere?
     - How can you help me?
@@ -192,25 +306,41 @@ nlu:
     - What services can I get from this bank?
     - What type of services do you provide?
     - What service do you provide?
-    - [atm](type_of_services)
-    - [ATM](type_of_services)
-    - [health insurance](type_of_services)
-    - [deposit](type_of_services)
     - show services
     - types of services given by vyccu
     - types of services in vivccu ltd
     - list of different services that we can receive from vyccu saving co-operative ltd
-    - [sms banking](type_of_services)
     - services of vyccu
     - varities of services
     - types of services
-    - [other services](type_of_services) of vyccu
-    - [Other Services](type_of_services) that are given in VYCCU
-    - [Other services](type_of_services) of VYCCU
-    - [other services](type_of_services)
-    - [Other Services](type_of_services)
-    - [Other services](type_of_services)
     - show me services
+    - मलाई यस कम्पनी द्वारा प्रस्ताव गरिएको सेवाहरूको बारेमा जानकारी दिनुहोस्।
+    - यस कम्पनीका सेवाहरू के हुन्?
+    - कस्तो प्रकारको सेवाहरू यस कम्पनी द्वारा प्रदान गरिएको छ?
+    - के सेवाहरू पप्रदान गरिएका छन्?
+    - तपाईं कस्तो प्रकारको सेवाहरू प्रस्ताव गर्नुहुन्छ?
+    - म यो कम्पनी द्वारा प्रदान गरिएको सेवाहरु को बारे मा जान्न चाहान्छु
+    - यो कम्पनी द्वारा प्रदान गरिएका सेवाहरू के हुन्?
+    - तपाईं के सेवाहरू प्रस्तुत गर्नुहुन्छ?
+    - तपाईं मलाई कसरी मद्दत गर्न सक्नुहुन्छ?
+    - सेवाहरू के हुन्?
+    - कुन सेवाहरू?
+    - सेवाहरू
+    - यस कम्पनी द्वारा प्रदान गरिएको सेवाहरूको बारेमा के छ?
+    - म यस कम्पनीबाट के सेवाहरू लिन सक्छु?
+    - प्रस्तुत सेवाहरूको सूची बनाउनुहोस्
+    - म प्रदान गरिएका सेवाहरूको बारेमा जान्न चाहन्छु
+    - म यस बैंकबाट के सेवाहरू लिन सक्छु?
+    - तपाईं कस्तो प्रकारको सेवाहरू प्रदान गर्नुहुन्छ?
+    - तपाई के सेवा प्रदान गर्नुहुन्छ?
+    - सेवाहरू देखाउनुहोस्
+    - विकु द्वारा दिएका सेवाहरूका प्रकारहरू
+    - विकु बचत तथा ॠण सहकारी लिमिटेडको सेवाहरूको प्रकार
+    - हामी विकु बचत सहकारी लिबाट ​​प्राप्त गर्न सक्ने विभिन्न सेवाहरूको सूची
+    - विकुको सेवाहरू
+    - सेवाहरूको विविधता
+    - सेवाहरूका प्रकारहरू
+    - मलाई सेवाहरू देखाउनुहोस्
 - intent: about_specific_service
   examples: |
     - What are the procedure for getting a [loan](type_of_services)?
@@ -254,24 +384,116 @@ nlu:
     - How to get [career loan](type_of_loan)?
     - How to get [education loan](type_of_loan)?
     - How to get [hire purchase loan](type_of_loan)?
-    - How to get [home loan](type_of_loan)?
+    - How to get [house loan](type_of_loan)?
     - How to get [industry loan](type_of_loan)?
     - I want to take [business loan](type_of_loan)
     - [business loan](type_of_loan)
     - I want to take a [business loan](type_of_loan)
     - I want a [business loan](type_of_loan)
     - I want to take a [business loan](type_of_loan) from this company
-    - [saving loan](type_of_loan)
     - [agriculture loan](type_of_loan)
     - [career loan](type_of_loan)
     - [education loan](type_of_loan)
     - [home loan](type_of_loan)
     - [hire purchase loan](type_of_loan)
     - [industry loan](type_of_loan)
+    - [mobile banking](type_of_services)
+    - [sms banking](type_of_services)
+    - [SMS banking](type_of_services)
+    - [atm](type_of_services)
+    - [ATM](type_of_services)
+    - [health insurance](type_of_services)
+    - [deposit](type_of_services)
+    - [other services](type_of_services) of vyccu
+    - [Other Services](type_of_services) that are given in VYCCU
+    - [Other services](type_of_services) of VYCCU
+    - [other services](type_of_services)
     - i want a [loan](type_of_services) from here
     - i want [mobile banking](type_of_services)
     - initiate [sms banking](type_of_services) for me
     - [remittance](type_of_services)
+    - एउटा [ऋण](type_of_services) प्राप्त गर्नका लागि प्रक्रिया के हो?
+    - म कसरी [ऋण](type_of_services) पाउन सक्छु?
+    - [ऋण](type_of_services) को बारे मा?
+    - म एउटा [ऋण](type_of_services) लिन चाहन्छु
+    - मलाई प्रदान [ऋण](type_of_services) गर्नुहोस्
+    - कृपया मलाई [ऋण](type_of_services) दिनुहोस्
+    - मलाई दिनुहोस् [ऋण](type_of_services)
+    - म [ऋण](type_of_services) चाहान्छु
+    - मलाई [ऋण](type_of_services) दिनुहोस्
+    - मलाई [ऋण](type_of_services) चाहिएको छ
+    - म [ऋण](type_of_services) प्राप्त गर्न चाहन्छु
+    - कसरी लिने यस कम्पनीमा (ऋण](type_of_services)
+    - [ऋण](type_of_services) दिनुहोस्
+    - म मेरो [एटीएम](type_of_services) सेवाको लागि दर्ता गर्न चाहन्छु
+    - म कसरी मेरो [एटीएम](type_of_services) सेवाहरूको लागि दर्ता गर्न सक्दछु
+    - [एटीएम](type_of_services) का लागि दर्ता प्रक्रिया
+    - अनलाइन दर्ता [एसएमएस बैंकिंग](type_of_services) को लागी सेवा
+    - [एटीएम](type_of_services) दर्ता
+    - [एटीएम](type_of_services) सक्रिय गर्नुहोस्
+    - मैले [एसएमएस बैंकिग](type_of_services) सक्रिय गर्नु पर्छ
+    - म [एटीएम](type_of_services) का लागि दर्ता गर्न चाहन्छु
+    - म [मोबाइल बैंकिंगंग](type_of_services) सुरु गर्न चाहन्छु।
+    - कसरी [मोबाइल बैंकिंगंग](type_of_services) सुरु गर्ने हो?
+    - म पैसा [डिपोजिट](type_of_services) गर्न चाहन्छु
+    - म [रेमिट्यान्स](type_of_services) बारे बुज्न चाहान्छु
+    - म [स्वास्थ्य बीमा](type_of_services) लिन चाहान्छु
+    - के म [व्यवसायिक ऋण](type_of_loan) पाउन सक्छु?
+    - के म [क्यारियर ऋण](type_of_loan) पाउन सक्छु?
+    - के म [शौक्षिक ऋण](type_of_loan) प्राप्त गर्न सक्छु?
+    - के म [भाडा खरीद ऋण](type_of_loan) बारे बुझ्न सक्दछु?
+    - मलाई [घर सम्पती ऋण](type_of_loan) बारे बुझ्न छ
+    - के म [व्यवसायिक ऋण](type_of_loan) पाउन सक्दछु?
+    - कसरी [कृषि ऋण](type_of_loan) प्राप्त गर्ने?
+    - कसरी [व्यवसायिक ऋण](type_of_loan) पाउने?
+    - कसरी प्राप्त गर्ने [क्यारियर ऋण](type_of_loan)?
+    - कसरी प्राप्त गर्ने [शौक्षिक ऋण](type_of_loan)?
+    - कसरी प्राप्त गर्ने [भाडा खरीद ऋण](type_of_loan)?
+    - कसरी [घर सम्पती ऋण](type_of_loan)?
+    - कसरी प्राप्त गर्ने [गृह ऋण](type_of_loan)?
+    - म [गृह ऋण](type_of_loan) लिन चाहन्छु
+    - [व्यवसायिक ऋण](type_of_loan)
+    - म एउटा [गृह ऋण](type_of_loan) लिन चाहान्छु
+    - म एउटा [व्यवसायिक ऋण](type_of_loan) चाहान्छु
+    - म यो कम्पनीबाट एउटा [गृह ऋण](type_of_loan) लिन चाहन्छु
+    - [उद्योग ऋण](type_of_loan)
+    - [कृषि ऋण](type_of_loan)
+    - [क्यारियर ऋण](type_of_loan)
+    - [शौक्षिक ऋण](type_of_loan)
+    - [घर सम्पती ऋण](type_of_loan)
+    - [भाडा खरीद ऋण](type_of_loan)
+    - [व्यवसायिक ऋण](type_of_loan)
+    - म यहाँबाट एउटा [ऋण](type_of_loan) लिन चाहान्छु
+    - म [मोबाइल बैंकिंग](type_of_loan) लिन चाहान्छु
+    - मेरो लागि [एसएमएस बैंकिंग](type_of_services) आरम्भ गर्नुहोस् 
+    - [रेमिट्यान्स](type_of_services)
+    - [अन्य बैंकिंग सेवा](type_of_services)
+    - [एटीएम](type_of_services)
+    - [स्वास्थ्य बीमा](type_of_services)
+    - [स्वास्थ्य बीमा](type_of_services)
+    - [डिपोजिट](type_of_services)
+    - [एसएमएस बैंकिंग](type_of_services)
+    - [मोबाइल बैंकिंग](type_of_services)
+    - [अन्य बैंकिंग सेवा](type_of_services) विकुको
+    - [रेमिट्यान्स](type_of_services) सेवा जुन विकुमा दिइन्छ
+    - [ऋण](type_of_services)
+    - मलाई [कृषि ऋण](type_of_loan) बारे भन
+    - मलाई [क्यारियर ऋण](type_of_loan) बारे भन
+    - मलाई [शौक्षिक ऋण](type_of_loan) बारे भन
+    - मलाई [भाडा खरीद ऋण](type_of_loan) बारे भन
+    - मलाई [घर सम्पती ऋण](type_of_loan) बारे भन
+    - मलाई [व्यवसायिक ऋण](type_of_loan) बारे भन
+    - मलाई [उद्योग ऋण](type_of_loan) बारे भन
+    - मलाई [एटीएम](type_of_services) सेवा बारे भन
+    - मलाई [एसएमएस बैंकिंग](type_of_services) सेवा बारे भन
+    - मलाई [मोबाइल बैंकिंग](type_of_services) सेवा बारे भन
+    - मलाई [रेमिट्यान्स](type_of_services) सेवा बारे भन
+    - मलाई [स्वास्थ्य बीमा](type_of_services) सेवा बारे भन
+    - मलाई [ऋण](type_of_services) सेवा बारे भन
+    - मलाई [डिपोजिट](type_of_services) सेवा बारे भन
+    - मलाई [अन्य बैंकिंग सेवा](type_of_services) बारे भन
+    - मलाई [ॠण](type_of_services) को बारेमा भन्नुहोस 
+    - [मोबाइल बैंकिंग](type_of_services)को बारेमा भन्नुहोस
 - intent: type_of_specific_service
   examples: |
     - what are the different type of [deposit](type_of_services)
@@ -290,6 +512,23 @@ nlu:
     - show types of [loan](type_of_services)
     - types of [loans]{"entity": "type_of_services", "value": "loan"} available here
     - types of [deposit](type_of_services) available here
+    - [डिपोजिट](type_of_services) को बिभिन्न प्रकार के हो 
+    - [डिपोजिट](type_of_services) का प्रकारहरू जुन विकुले प्रदान गर्दछ
+    - विभिन्न प्रकारका [डिपोजिट](type_of_services)
+    - विकु मा दिने [डिपोजिट](type_of_services)का प्रकारहरू
+    - [डिपोजिट](type_of_services)का बिभिन्न सूचीबद्ध जुन हामी विकु बाट प्राप्त गर्न सक्छौं
+    - विकु बचत लिमिटेडले कस्तो प्रकारका [डिपोजिट](type_of_services)हरु दिन्छन?
+    - [ऋण](type_of_services) का प्रकार
+    - विभिन्न प्रकारका [ऋण](type_of_services)
+    - विकु बचत र सहकारी सीमित को विभिन्न [ऋण](type_of_services) सेवाहरु
+    - सबै [ऋण](type_of_services) देखाउनुहोस् 
+    - [डिपोजिट](type_of_services) को सूची देखाउनुहोस् 
+    - [ऋण](type_of_services) को प्रकार सूचीबद्ध गर्नुहोस्
+    ऋण को प्रकार सूचीबद्ध गर्नुहोस् 
+    - विकुमा उपलब्ध विभिन्न [ऋण](type_of_services)हरु 
+    - [ऋण](type_of_services)का प्रकारहरू देखाउनुहोस्
+    - [ऋण]{"entity": "type_of_services", "value": "loan"}का प्रकारहरू यहाँ उपलब्ध गराउ
+    - [डिपोजिट](type_of_services) का प्रकारहरू यहाँ उपलब्ध गराउ
 - intent: about_service_center
   examples: |
     - Where are the service centers of this company?
@@ -321,6 +560,36 @@ nlu:
     - How many branches are there?
     - How many branches are there in this company?
     - Okay, what about the branches of this company?
+    - यस कम्पनीको सेवा केन्द्रहरू कहाँ छन्?
+    - यस कम्पनीमा कति सेवा केन्द्रहरू छन्?
+    - कृपया मलाई तपाईंको नजिकको सेवा केन्द्रहरू सुझाव गर्नुहोस्?
+    - मेरो लागि नजिकको सेवा केन्द्र कुन हो?
+    - म कसरी यो कम्पनीको सेवा केन्द्रहरू पहुँच गर्न सक्दछु?
+    - यस कम्पनीको सेवा केन्द्रहरू के हुन्?
+    - त्यहाँ मेरो नजिकै यस कम्पनीको सेवा केन्द्रहरू छन्?
+    - के यो कम्पनीमा सेवा केन्द्रहरू छन्?
+    - मेरो नजिक सेवा केन्द्रहरू
+    - नजिकको सेवा केन्द्रहरू
+    - म कुन सेवा केन्द्र पहुँच गर्न सक्दछु?
+    - कुन सेवा केन्द्रको उपयोग गर्नु पर्छ?
+    - मलाई यस कम्पनीको सेवा केन्द्रहरूको माध्यमबाट गाईड गर्नुहोस्।
+    - कृपया मलाई तपाईंको सेवा केन्द्रहरूको बारेमा बताउनुहोस्।
+    - म कसरी यो कम्पनी को सेवा केन्द्रहरु को बारे मा जानकारी प्राप्त गर्नु पर्छ?
+    - कृपया मलाई उपलब्ध सेवा केन्द्रहरूको बारेमा बताउनुहोस्
+    - कति सेवा केन्द्रहरू?
+    - सेवा केन्द्रहरू
+    - फरक सेवा केन्द्रहरू के हुन्
+    - जहाँ सेवा केन्द्र स्थित छ
+    - विकु को सेवा केन्द्रहरूको नाम सूचीबद्ध गर्नुहोस्
+    - विकु सेवा केन्द्र सूची
+    - विकु सेवा केन्द्रहरूको स्थान
+    - यस कम्पनीको कति शाखाहरू छन्?
+    - तपाईं मलाई कम्पनीको शाखा को सूची देखाउन सक्नुहुन्छ?
+    - मलाई कम्पनीको शाखाहरूको सूची दिनुहोस्।
+    - त्यहाँ कतिवटा शाखाहरू छन्?
+    - यस कम्पनीमा कति शाखाहरू छन्?
+    - ठीक छ, यस कम्पनी को शाखा बारे के?
+    - नजिकको शाखाहरू दिनुहोस्।
 - intent: contact
   examples: |
     - Can I get the contact number of the customer service?
@@ -354,6 +623,38 @@ nlu:
     - how to contact you
     - i want to contact the office
     - i want your contact
+    - म ग्राहक सेवा को संपर्क नम्बर प्राप्त गर्न सक्नुहुन्छ?
+    - के म कम्पनी प्रबन्धकको सम्पर्क नम्बर प्राप्त गर्न सक्छु?
+    - के म लन्डन शाखाको सम्पर्क नम्बर पाउन सक्छु?
+    - ग्राहक सेवा को सम्पर्क नम्बर के हो?
+    - कम्पनी प्रबन्धक को सम्पर्क नम्बर के हो?
+    - शाखा को सम्पर्क नम्बर के हो?
+    - म कसरी तपाईंको कार्यालयमा सम्पर्क गर्न सक्छु?
+    - म कसरी तपाईंको कार्यालयमा सम्पर्क गर्न सक्दछु?
+    - यो कम्पनी कुनै अन्तर्राष्ट्रिय कम्पनी संग जोडिएको छ?
+    - के कम्पनीको विदेशी कम्पनीसँग कुनै सम्बन्ध छ?
+    - म कसरी यो कम्पनी अनलाइन पछ्याउन सक्छु?
+    - इन्टरनेट मा यो कम्पनी कसरी पछ्याउने?
+    - यस कम्पनीको URL ठेगाना प्रदान गर्नुहोस्
+    - के यस कम्पनीको आफ्नै वेबसाइट छ?
+    - यो कम्पनी कसरी पछ्याउने?
+    - कृपया सम्पर्क नम्बर
+    - मलाई यस कम्पनीको सम्पर्क ठेगाना दिनुहोस्
+    - मलाई यस कम्पनीको सम्पर्क ठेगाना दिनुहोस्
+    - म कसरी सम्पर्क गर्नुपर्दछ?
+    - सम्पर्क गर्न प्रक्रिया के हो
+    - तपाईंको सम्पर्क नम्बर दिनुहोस्
+    - सम्पर्क नम्बर
+    - सम्पर्क
+    - फोन नम्बर
+    - विकु को वेबसाइट
+    - टेलिफोन नम्बर
+    - वेब ठेगाना
+    - वेबसाइट
+    - विकु को फोन नम्बर
+    - कसरी तपाईंलाई सम्पर्क गर्ने
+    - म कार्यालयमा सम्पर्क गर्न चाहन्छु
+    - म तपाईंको सम्पर्क चाहन्छु  
 - intent: open_account
   examples: |
     - i want to open an account
@@ -363,6 +664,13 @@ nlu:
     - create a new account
     - open an account in vyccu saving and credit co-operative ltd
     - open account in vyccu
+    - म खाता खोल्न चाहन्छु
+    - नयाँ खाता खोल्नुहोस्
+    - बचत खाता खोल्नुहोस्
+    - बचत खाता खोल्न मलाई मद्दत गर्नुहोस्
+    - नयाँ खाता खोल्नुहोस्
+    - विकु बचत र क्रेडिट सहकारी लि। मा खाता खोल्नुहोस्
+    - विकु मा खाता खोल्नुहोस्
 - intent: affirm
   examples: |
     - yes
@@ -376,6 +684,16 @@ nlu:
     - ok sir
     - ok dude
     - ok ok
+    - हो हो
+    - हो
+    - हो, मेरो खाता पहिले नै छ
+    - म संग एक खाता छ
+    - म विकु मा एक खाता छ
+    - ठिक छ
+    - हुन्छ सर
+    - ठीक छ यार
+    - हुन्छ हुन्छ
+    - हुन्छ
 - intent: deny
   examples: |
     - no
@@ -384,6 +702,14 @@ nlu:
     - nope
     - no i dont have any account
     - no i do not have account in vyccu
+    - नाइ नाइ
+    - नाइ
+    - होईन
+    - हैन मसँग छैन
+    - हैन म गर्दिन
+    - होइन
+    - होईन मलाई कुनै खाता छैन
+    - हैन, मसँग विकु मा खाता छैन
 - intent: interest_rate
   examples: |
     - What is the rate of interest for fixed [Deposit](type_of_services)?
@@ -431,6 +757,56 @@ nlu:
     - i want to get the interest rate for the [loans]{"entity": "type_of_services", "value": "loan"}
     - interest rate of [loan](type_of_services)
     - i wanna know the rate for [deposit](type_of_services)
+    - [डिपोजिट](type_of_services) ब्याज दर
+    - [ऋण](type_of_services) ब्याज दर
+    - [ऋण](type_of_services) ब्याज दर कति हो
+    - [डिपोजिट](type_of_services) ब्याज दर कति हो
+    - स्थिर [डिपोजिट](type_of_services) को लागि ब्याज दर के हो?
+    - [ऋण](type_of_services) को लागी ब्याज दर के हो?
+    - मलाई सबै प्रकारका [ऋण](type_of_services) का लागि ब्याज दर देखाउनुहोस्।
+    - फिक्स्ड [डिपोजिट](type_of_services) खाता प्रयोग गर्दा कति ब्याज प्रदान गरिने छ?
+    - मलाई सबै सेवाहरूमा ब्याज दरको विवरण प्रदान गर्नुहोस्।
+    - प्रस्ताव गरिएको ब्याज दर के हो?
+    - [ऋण](type_of_services)को ब्याजदरका प्रकार।
+    - [डिपोजिट](type_of_services) को ब्याज दर।
+    - [डिपोजिट](type_of_services)मा जम्मा कति ब्याज पाउँछु?
+    - मैले कति ब्याज तिर्नु पर्छ?
+    - [ऋण](type_of_services) मा ब्याज दरका प्रकारको के हो ?
+    - फिक्स्ड [डिपोजिट](type_of_services) मा सबैभन्दा ठूलो ब्याज दर के हो?
+    - मैले कति ब्याज तिर्नु पर्छ?
+    - कति ब्याज दर हो [ऋण](type_of_services) को लागि।
+    - जम्मा कति ब्याज दर हो [डिपोजिट](type_of_services) को लागि।
+    - मैले [ऋण](type_of_services)मा कति ब्याज तिर्नु पर्छ ?
+    - मैले कम्तिमा पनि ब्याज तिर्नु पर्छ [डिपोजिट](type_of_services) गर्दा खेरी ?
+    - [ऋण](type_of_services) को लागी ब्याज दर के हो?
+    - [डिपोजिट](type_of_services) गरेको कति ब्याज तिर्नु पर्छ मैले?
+    - म ब्याज दरको बारेमा जान्न चाहन्छु
+    - ब्याजदर
+    - ब्याज
+    - ब्याज दर
+    - ब्याज राशि
+    - तपाईको ब्याज दर के हो?
+    - मैले कति ब्याज दर तिर्नु पर्छ?
+    - [ऋण](type_of_services) का लागि ब्याज दर के हो ।
+    - ब्याज दर देखाउनुहोस्
+    - ब्याज दर देखाउनुहोस्
+    - मलाई ब्याज दर बारे बताउनुहोस्
+    - मलाई [ऋण](type_of_services) ब्याज दरको बारेमा बताउनुहोस्
+    - [ऋण](type_of_services) को लागी ब्याज दर कसरी छ
+    - विकुमा [डिपोजिट](type_of_services) को लागी ब्याज दर कती हो
+    - ब्याजको लागि बिभिन्न दर सूचीबद्ध गर्नु छ
+    - ब्याजदर [डिपोजिट](type_of_services)को
+    - ब्याजदर जाँच गर्नुपर्‍यो
+    - [डिपोजिट](type_of_services) को लागी ब्याजदर के हो
+    - म [ऋण]{"entity":"type_of_services", "value": "loan"}को लागी ब्याज दर प्राप्त गर्न चाहन्छु
+    - [ऋण](type_of_services) को ब्याज दर 
+    - म [डिपोजिट](type_of_services) को लागि दर जान्न चाहान्छु
+    - [ऋण](type_of_services) ब्याज दर कती हो भन
+    - [डिपोजिट](type_of_services) ब्याज दर कती हो भन
+    - [ऋण](type_of_services) ब्याज दर कती हो भन
+    - [डिपोजिट](type_of_services) ब्याज दर कती हो भन
+    - [डिपोजिट ब्याज दर](type_of_services)
+    - [ऋण ब्याज दर](type_of_services)
 - intent: location
   examples: |
     - Where is the location of this company?
@@ -451,6 +827,24 @@ nlu:
     - where?
     - Where is it?
     - company location
+    - यो कम्पनी को स्थान कहाँ छ?
+    - कम्पनी कहाँ अवस्थित छ?
+    - मलाई नजिकको कम्पनीमा दिशा देखाउनुहोस्।
+    - मेरो स्थानबाट नजिकको कम्पनी कुन हो?
+    - यस कम्पनीको प्रमुख कार्यालय कहाँ छ?
+    - म कसरी यो कम्पनीमा पुग्न सक्छु?
+    - तपाईंको कार्यालय कहाँ अवस्थित छ?
+    - यो कम्पनी को ठेगाना कहाँ छ?
+    - यो कम्पनी कहाँ छ?
+    - के म तपाईंको ठेगाना पाउन सक्छु?
+    - कम्पनीको ठेगना
+    - कम्पनी कहाँ छ?
+    - यो कहाँ अवस्थित छ?
+    - मलाई यो कम्पनीको स्थान दिनुहोस्।
+    - कहाँ?
+    - त्यो कहाँ छ?
+    - कम्पनी स्थान
+    - यो कुन ठाउ म छ
 - intent: get_atm_card
   examples: |
     - how to get ATM card
@@ -459,27 +853,85 @@ nlu:
     - i need my atm card
     - from where can i get the [ATM]{"entity": "type_of_services", "value": "atm"} card
     - get my atm card
+    - कसरी एटीएम कार्ड पाउने
+    - म कहाँबाट एटीएम कार्ड प्राप्त गर्न सक्छु
+    - म मेरो एटीएम कार्ड लिन चाहन्छु
+    - मलाई मेरो एटीएम कार्ड चाहिन्छ
+    - कहाँबाट म एटीएम कार्ड प्राप्त गर्न सक्दछु 
+    - मेरो एटीएम कार्ड कसरी पाईन्छ
+    - कता बात एटीएम कारड लिन सकिन्छ
+    - एटीएम कार्ड लिने तरिका के हो
 - synonym: loan
   examples: |
     - loans
     - loan
     - Loan
+    - ऋण
 - synonym: atm
   examples: |
     - ATM
     - atm
+    - एटीएम
 - synonym: deposit
   examples: |
     - deposit
     - Deposit
     - deposits
+    - डिपोजिट
 - synonym: other services
   examples: |
     - Other services
     - Other Services
     - other servics
+    - अन्य बैंकिंग सेवा
 - synonym: sms banking
   examples: |
     - sms banking
     - SMS banking
     - SMS Banking
+    - एसएमएस बैंकिंग
+- synonym: mobile banking
+  examples: |
+    - mobile banking
+    - मोबाइल बैंकिंग
+- synonym: remittance
+  examples: |
+    - remittance
+    - रेमिट्यान्स
+- synonym: health insurance
+  examples: |
+    - health insurance
+    - स्वास्थ्य बीमा
+- synonym: agriculture loan
+  examples: |
+    - agriculture loan
+    - कृषि ऋण
+- synonym: business loan
+  examples: |
+    - business loan
+    - व्यवसायिक ऋण
+- synonym: education loan
+  examples: |
+    - education loan
+    - शौक्षिक ऋण
+- synonym: home loan
+  examples: |
+    - home loan
+    - house loan
+    - भाडा खरीद ऋण
+- synonym: career loan
+  examples: |
+    - career loan
+    - क्यारियर ऋण
+- synonym: industry loan
+  examples: |
+    - industry loan
+    - उद्योग ऋण
+- synonym: rate loan
+  examples: |
+    - rate loan
+    - ऋण ब्याज दर
+- synonym: rate deposit
+  examples: |
+    - rate deposit
+    - डिपोजिट ब्याज दर
